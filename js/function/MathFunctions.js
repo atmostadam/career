@@ -18,3 +18,11 @@ export function splitToEqualPartsArray(value, parts, offset) {
     }
     return arr;
 }
+
+export function sumArr(arr, index) {
+    let sum = 0;
+    for (let i = 0; i <= index; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}

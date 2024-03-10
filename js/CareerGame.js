@@ -1,5 +1,4 @@
 import { GameContext } from "./context/GameContext.js";
-import { GAME_SCREEN } from "./configuration/GameConfiguration.js";
 
 window.addEventListener("load", function () {
     const minMsPerFrame = 1000 / 60;

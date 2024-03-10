@@ -1,4 +1,5 @@
-import { AssetsComponent } from "../component/AssetsComponent.js";
+import { GridBuilder } from "../builder/GridBuilder.js";
+import { AssetsComponent } from "./../component/AssetsComponent.js";
 
 export class GameScreen {
     constructor(context) {
@@ -6,14 +7,34 @@ export class GameScreen {
         this.components = [
             new AssetsComponent(this.context)
         ];
+        this.grid = new GridBuilder(
+            this.context,
+            [50, 50],
+            [50, 50],
+            0,
+            0,
+            100,
+            100
+        )
+            .addBorder(0, 0, 3, "Orange")
+            .addBorder(0, 1, 3, "Orange")
+            .addBorder(1, 0, 3, "Orange")
+            .addBorder(1, 1, 3, "Orange")
+            .build();
     }
 
     update(tick) {
         this.components.forEach(e => e.update(tick));
+        this.grid.update(
+            this.tick,
+            0,
+            0,
+            this.context.get);
     }
 
     draw() {
         this.components.forEach(e => e.draw());
+        this.grid.draw();
     }
 
     /*

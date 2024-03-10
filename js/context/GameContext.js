@@ -32,6 +32,8 @@ export class GameContext {
             new GameScreen(this)
         ]
         this.screen = this.screens[0];
+
+        this.BOTTOM_BROWSER_BUFFER = 100;
     }
 
     putImage(url, image) {
@@ -84,9 +86,9 @@ export class GameContext {
 
     clear() {
         let canvasW = this.canvas.width;
-        let canvasH = this.canvas.height;
+        let canvasH = this.canvas.height - this.BOTTOM_BROWSER_BUFFER;
         let clientW = this.canvas.getBoundingClientRect().width;
-        let clientH = this.canvas.getBoundingClientRect().height;
+        let clientH = this.canvas.getBoundingClientRect().height - this.BOTTOM_BROWSER_BUFFER;
 
         if (canvasW != clientW || canvasH != clientH) {
             this.canvas.width = clientW;
@@ -96,7 +98,7 @@ export class GameContext {
         }
 
         let ctx = this.getCtx();
-        ctx.clearRect(0, 0, this.getWidth(), this.getHeight());
+        ctx.clearRect(0, 0, this.getWidth(), this.getHeight() + this.BOTTOM_BROWSER_BUFFER);
 
     }
 
@@ -124,7 +126,7 @@ export class GameContext {
         return this.getHeight();
     }
 
-    getWidtpercentH(percent) {
+    getWidthPercent(percent) {
         return this.getWidth() * (percent / 100);
     }
 

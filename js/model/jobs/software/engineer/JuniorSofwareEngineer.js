@@ -4,23 +4,23 @@ import { SoftwareEngineerI } from "./SoftwareEngineerI.js";
 /* https://www.salary.com/research/salary/posting/junior-programmer-salary/atlanta-ga */
 export class JuniorSoftwareEngineer {
     constructor() {
-        this._title = "Junior";
-        this._salary = 53594;
-        this._performanceBonus = 2000;
-        this._stockOptions = 0;
-        this._responsibilities = [];
-        this._responsibilities.push("• Learns - Software and Analysis Design");
-        this._responsibilities.push("• Learns - Software Methodologies, Meetings, Standups");
-        this._responsibilities.push("• Junior - Writes and Debugs Basic Software Code");
-        this._responsibilities.push("• Junior - Basic Software Unit Testing");
-        this._responsibilities.push("• Junior- Basic Software Troubleshooting");
-        this._responsibilities.push("• Reports To - Lead or Senior Software Engineer");
-        this._responsibilities.push("• Qualifications - Associate of Computer Science");
-        this._jobImageId = "JuniorSoftwareEngineerImage";
-        this._jobImageW = 1024;
-        this._jobImageH = 768;
-        this._jobLevel = 1;
-        this._promotionChance = 60;
+        this.title = "Junior";
+        this.salary = 53594;
+        this.performanceBonus = 2000;
+        this.stockOptions = 0;
+        this.responsibilities = [];
+        this.responsibilities.push("• Learns - Software and Analysis Design");
+        this.responsibilities.push("• Learns - Software Methodologies, Meetings, Standups");
+        this.responsibilities.push("• Junior - Writes and Debugs Basic Software Code");
+        this.responsibilities.push("• Junior - Basic Software Unit Testing");
+        this.responsibilities.push("• Junior- Basic Software Troubleshooting");
+        this.responsibilities.push("• Reports To - Lead or Senior Software Engineer");
+        this.responsibilities.push("• Qualifications - Associate of Computer Science");
+        this.jobImageId = "JuniorSoftwareEngineerImage";
+        this.jobImageW = 1024;
+        this.jobImageH = 768;
+        this.jobLevel = 1;
+        this.promotionChance = 60;
     }
 
     get title() {
@@ -31,12 +31,12 @@ export class JuniorSoftwareEngineer {
         this._title = title;
     }
 
-    get salary() {
-        return this._salary;
+    getSalary() {
+        return this.salary;
     }
 
-    set salary(salary) {
-        this._salary = salary;
+    setSalary(salary) {
+        this.salary = salary;
     }
 
     get performanceBonus() {

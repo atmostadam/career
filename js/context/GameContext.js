@@ -1,6 +1,11 @@
+import { JuniorSoftwareEngineer } from "../model/jobs/software/engineer/JuniorSofwareEngineer.js";
+import { BankAccount } from "../model/assets/BankAccount.js";
 import { MouseListener } from "./../listener/MouseListener.js";
 import { Player } from "./../model/player/Player.js";
 import { GameScreen } from "./../screen/GameScreen.js";
+import { Salary } from "../model/revenue/Salary.js";
+import { StudentLoan } from "../model/liabilities/StudentLoan.js";
+import { MortgagePayment } from "../model/expenses/MortgagePayment.js";
 
 const images = new Map();
 
@@ -27,11 +32,14 @@ export class GameContext {
         this.map = new Map();
         this.clear();
         this.mouseListener = new MouseListener(this);
-        this.player = new Player(this);
-        this.screens = [
-            new GameScreen(this)
-        ]
-        this.screen = this.screens[0];
+        let job = new JuniorSoftwareEngineer(this);
+        this.player = new Player(this, job, 22);
+        this.player.getAssets().push(new BankAccount(0));
+        this.player.getLiabilities().push(new StudentLoan(100000))
+        this.player.getRevenue().push(new Salary(job.getSalary()))
+        this.player.getExpenses().push(new MortgagePayment(500));
+
+        this.screen = new GameScreen(this);
 
         this.BOTTOM_BROWSER_BUFFER = 100;
     }
@@ -52,28 +60,12 @@ export class GameContext {
         this.mouseListener = mouseListener;
     }
 
-    getGrid() {
-        return this.grid;
-    }
-
-    setGrid(grid) {
-        this.grid = grid;
-    }
-
     getPlayer() {
         return this.player;
     }
 
     setPlayer(player) {
         this.player = player;
-    }
-
-    getScreens() {
-        return this.screens;
-    }
-
-    setScreens(screens) {
-        this.screens = screens;
     }
 
     getScreen() {

@@ -42,4 +42,11 @@ export class Player {
     getStartingAge() {
         return this.startingAge;
     }
+
+    asArrayOfArraysAssets() {
+        let arrayOfArrays = [];
+        // TODO: Sort
+        this.assets.forEach(e => arrayOfArrays.push(e));
+        return arrayOfArrays;
+    }
 }

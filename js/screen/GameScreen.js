@@ -1,47 +1,11 @@
-import { GridBorderDrawing } from "./../drawing/GridBorderDrawing.js";
-import {
-    GAME_SCREEN_ASSET_PERCENT_X,
-    GAME_SCREEN_ASSET_PERCENT_Y,
-    GAME_SCREEN_ASSET_PERCENT_W_ARRAY,
-    GAME_SCREEN_ASSET_PERCENT_H_ARRAY,
-    GAME_SCREEN_ASSET_PERCENT_BORDER,
-    GAME_SCREEN_ASSET_COLOR,
-    GAME_SCREEN_LIABILITY_PERCENT_X,
-    GAME_SCREEN_LIABILITY_PERCENT_Y,
-    GAME_SCREEN_LIABILITY_PERCENT_W_ARRAY,
-    GAME_SCREEN_LIABILITY_PERCENT_H_ARRAY,
-    GAME_SCREEN_LIABILITY_PERCENT_BORDER,
-    GAME_SCREEN_LIABILITY_BORDER_COLOR,
-    GAME_SCREEN_REVENUE_PERCENT_X,
-    GAME_SCREEN_REVENUE_PERCENT_Y,
-    GAME_SCREEN_REVENUE_PERCENT_W_ARRAY,
-    GAME_SCREEN_REVENUE_PERCENT_H_ARRAY,
-    GAME_SCREEN_REVENUE_PERCENT_BORDER,
-    GAME_SCREEN_REVENUE_BORDER_COLOR,
-    GAME_SCREEN_EXPENSE_PERCENT_X,
-    GAME_SCREEN_EXPENSE_PERCENT_Y,
-    GAME_SCREEN_EXPENSE_PERCENT_W_ARRAY,
-    GAME_SCREEN_EXPENSE_PERCENT_H_ARRAY,
-    GAME_SCREEN_EXPENSE_PERCENT_BORDER,
-    GAME_SCREEN_EXPENSE_BORDER_COLOR
-} from "./../configuration/GameConfiguration.js";
 import { AssetTableComponent } from "../component/AssetTableComponent.js";
+import { LiabilityTableComponent } from "../component/LiabilityTableComponent.js";
+import { RevenueTableComponent } from "../component/RevenueTableComponent.js";
+import { ExpenseTableComponent } from "../component/ExpenseTableComponent.js";
 
 export class GameScreen {
     constructor(context) {
         this.context = context;
-
-
-        //this.columnPercentWs = [16, 7];
-        //this.rowPercentHs = splitToEqualPartsArray(36, 12);
-
-
-        //this.components = [
-        //    new AssetTableComponent(this.context),
-        //    new LiabilityTableComponent(this.context),
-        //    new RevenueTableComponent(this.context),
-        //    new ExpenseTableComponent(this.context)
-        //];
     }
 
     update(tick) {
@@ -50,11 +14,11 @@ export class GameScreen {
 
     draw() {
         new AssetTableComponent(this.context).draw();
-        //this.drawAssetTable();
-        this.drawLiabilityTable();
-        this.drawRevenueTable();
-        this.drawExpenseTable();
+        new LiabilityTableComponent(this.context).draw();
+        new RevenueTableComponent(this.context).draw();
+        new ExpenseTableComponent(this.context).draw();
     }
+    /*
 
     drawLiabilityTable() {
         new GridBorderDrawing(
@@ -91,6 +55,7 @@ export class GameScreen {
             GAME_SCREEN_EXPENSE_BORDER_COLOR
         ).draw();
     }
+    */
 
 
 

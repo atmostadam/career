@@ -1,6 +1,6 @@
 import { RectangleSolidDrawing } from "./RectangleSolidDrawing.js";
 
-export class GridBackgroundColorDrawing {
+export class GridBackgroundDrawing {
     constructor(context, percentX, percentY, percentWArray, percentHArray, backgroundColor) {
         this.context = context;
         this.percentX = percentX;

@@ -1,23 +1,22 @@
 export class BaseExpense {
-    constructor(label, value) {
-        this._label = label;
-        this._value = value;
-    }
-
-    get label() {
-        return this._label;
-    }
-
-    get value() {
-        return this._value;
-    }
-
-    set value(value) {
-        this._value = value;
-        return this;
+    constructor(id, value) {
+        this.id = id;
+        this.value = value;
     }
 
     pay() {
-        return this._value;
+        return this.value;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getValue() {
+        return this.value;
+    }
+
+    setValue(value) {
+        this.value = value;
     }
 }

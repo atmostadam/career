@@ -1,13 +1,18 @@
+import { Assets } from "../assets/Assets.js";
+import { Liabilities } from "../liabilities/Liabilities.js";
+import { Revenue } from "../revenue/Revenue.js";
+import { Expenses } from "../expenses/Expenses.js";
+
 export class Player {
     constructor(context, job, age) {
         this.context = context;
         this.job = job;
         this.startingAge = age;
         this.age = age;
-        this.assets = [];
-        this.liabilites = [];
-        this.revenue = [];
-        this.expenses = [];
+        this.assets = new Assets();
+        this.liabilites = new Liabilities();
+        this.revenue = new Revenue();
+        this.expenses = new Expenses();
     }
 
     getAssets() {
@@ -41,12 +46,5 @@ export class Player {
 
     getStartingAge() {
         return this.startingAge;
-    }
-
-    asArrayOfArraysAssets() {
-        let arrayOfArrays = [];
-        // TODO: Sort
-        this.assets.forEach(e => arrayOfArrays.push(e));
-        return arrayOfArrays;
     }
 }

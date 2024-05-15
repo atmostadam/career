@@ -34,10 +34,9 @@ export class GameContext {
         this.mouseListener = new MouseListener(this);
         let job = new JuniorSoftwareEngineer(this);
         this.player = new Player(this, job, 22);
-        this.player.getAssets().push(new BankAccount(0));
-        this.player.getLiabilities().push(new StudentLoan(100000))
-        this.player.getRevenue().push(new Salary(job.getSalary()))
-        this.player.getExpenses().push(new MortgagePayment(500));
+        this.player.getLiabilities().getStudentLoan().setValue(100000);
+        this.player.getRevenue().getSalary().setValue(job.getSalary());
+        this.player.getExpenses().getMortgagePayment().setValue(500);
 
         this.screen = new GameScreen(this);
 

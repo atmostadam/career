@@ -1,23 +1,10 @@
 export class BaseLiability {
-    constructor(label, value, interestRate, currentYear, totalYears) {
-        this._label = label;
-        this._value = value;
-        this._interestRate = interestRate;
-        this._currentYear = currentYear;
-        this._totalYears = totalYears;
-    }
-
-    get label() {
-        return this._label;
-    }
-
-    get value() {
-        return this._value;
-    }
-
-    set value(value) {
-        this._value = value;
-        return this;
+    constructor(id, value, interestRate, currentYear, totalYears) {
+        this.id = id;
+        this.value = value;
+        this.interestRate = interestRate;
+        this.currentYear = currentYear;
+        this.totalYears = totalYears;
     }
 
     increase(amount) {
@@ -29,36 +16,45 @@ export class BaseLiability {
         return this;
     }
 
-    get interestRate() {
-        return this._interestRate;
-    }
-
-    set interestRate(interestRate) {
-        this._interestRate = interestRate;
-        return this;
-    }
-
-    get currentYear() {
-        return this._currentYear;
-    }
-
-    set currentYear(currentYear) {
-        this._currentYear = currentYear;
-        return this;
-    }
-
-    get totalYears() {
-        return this._totalYears;
-    }
-
-    set totalYears(totalYears) {
-        this._totalYears = totalYears;
-        return this;
-    }
-
     compound() {
         let interest = this._value * (this._interestRate / 100);
         this.increase(interest);
         return interest;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getValue() {
+        return this.value;
+    }
+
+    setValue(value) {
+        this.value = value;
+    }
+
+    getInterestRate() {
+        return this.interestRate;
+    }
+
+    setInterestRate(interestRate) {
+        this.interestRate = interestRate;
+    }
+
+    getCurrentYear() {
+        return this._currentYear;
+    }
+
+    setCurrentYear(currentYear) {
+        this.currentYear = currentYear;
+    }
+
+    getTotalYears() {
+        return this.totalYears;
+    }
+
+    setTotalYears(totalYears) {
+        this.totalYears = totalYears;
     }
 }

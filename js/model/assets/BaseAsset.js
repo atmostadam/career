@@ -1,64 +1,59 @@
 export class BaseAsset {
-    constructor(label, value, historicRateOfReturn, minRateOfReturn, maxRateOfReturn) {
-        this._label = label;
-        this._value = value;
-        this._historicRateOfReturn = historicRateOfReturn;
-        this._minRateOfReturn = minRateOfReturn;
-        this._maxRateOfReturn = maxRateOfReturn;
-    }
-
-    get label() {
-        return this._label;
-    }
-
-    get value() {
-        return this._value;
-    }
-
-    set value(value) {
-        this._value = value;
-        return this;
+    constructor(id, value, historicRateOfReturn, minRateOfReturn, maxRateOfReturn) {
+        this.id = id;
+        this.value = value;
+        this.historicRateOfReturn = historicRateOfReturn;
+        this.minRateOfReturn = minRateOfReturn;
+        this.maxRateOfReturn = maxRateOfReturn;
     }
 
     increase(amount) {
-        this._value += amount;
+        this.value += amount;
     }
 
     decrease(amount) {
-        this._value -= amount;
-        return this;
-    }
-
-    get historicRateOfReturn() {
-        return this._historicRateOfReturn;
-    }
-
-    set historicRateOfReturn(historicRateOfReturn) {
-        this._historicRateOfReturn = historicRateOfReturn;
-        return this;
-    }
-
-    get minRateOfReturn() {
-        return this._minRateOfReturn;
-    }
-
-    set minRateOfReturn(minRateOfReturn) {
-        this._minRateOfReturn = minRateOfReturn;
-        return this;
-    }
-
-    get maxRateOfReturn() {
-        return this._maxRateOfReturn;
-    }
-
-    set maxRateOfReturn(maxRateOfReturn) {
-        this._maxRateOfReturn = maxRateOfReturn;
-        return this;
+        this.value -= amount;
     }
 
     compound() {
-        let interest = this._value * (this._historicRateOfReturn / 100);
+        let interest = this.value * (this.historicRateOfReturn / 100);
         this.increase(interest);
         return interest;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getValue() {
+        return this.value;
+    }
+
+    setValue(value) {
+        this.value = value;
+    }
+
+    getHistoricRateOfReturn() {
+        return this.historicRateOfReturn;
+    }
+
+    setHistoricalRateOfReturn(historicalRateOfReturn) {
+        this.historicalRateOfReturn = istoricalRateOfReturn;
+    }
+
+    getMinRateOfReturn() {
+        return this.minRateOfReturn;
+    }
+
+    setMinRateOfReturn(minRateOfReturn) {
+        this.minRateOfReturn = minRateOfReturn;
+    }
+
+    getMaxRateOfReturn() {
+        return this.maxRateOfReturn;
+    }
+
+    setMaxRateOfReturn(maxRateOfReturn) {
+        this.maxRateOfReturn = maxRateOfReturn;
     }
 }

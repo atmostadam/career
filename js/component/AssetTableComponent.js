@@ -40,17 +40,122 @@ export class AssetTableComponent {
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
             )
-            .addGridText(
-                0,
-                this.context.getPlayer().asArrayOfArraysAssets(),
-                GAME_SCREEN_GRID_TEXT_TYPE,
-                GAME_SCREEN_GRID_TEXT_COLOR,
+            .addRowText(
+                1,
+                [
+                    this.context.getPlayer().getAssets().getBankAccount().getId(),
+                    "$" + this.context.getPlayer().getAssets().getBankAccount().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                2,
+                [
+                    this.context.getPlayer().getAssets().getCar().getId(),
+                    "$" + this.context.getPlayer().getAssets().getCar().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                3,
+                [
+                    this.context.getPlayer().getAssets().getCertificateOfDeposit().getId(),
+                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                4,
+                [
+                    this.context.getPlayer().getAssets().getCorporateBond().getId(),
+                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                5,
+                [
+                    this.context.getPlayer().getAssets().getHouse().getId(),
+                    "$" + this.context.getPlayer().getAssets().getHouse().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                6,
+                [
+                    this.context.getPlayer().getAssets().getNasdaqIndex().getId(),
+                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                7,
+                [
+                    this.context.getPlayer().getAssets().getNyseIndex().getId(),
+                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                8,
+                [
+                    this.context.getPlayer().getAssets().getSavingsAccount().getId(),
+                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                9,
+                [
+                    this.context.getPlayer().getAssets().getSnp500Index().getId(),
+                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                10,
+                [
+                    this.context.getPlayer().getAssets().getTreasuryBill().getId(),
+                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getValue()
+                ],
+                GAME_SCREEN_GRID_TITLE_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
                 GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
                 GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
             )
             .addRowText(
                 11,
-                ["TOTAL", 7777],
+                [
+                    "TOTAL",
+                    "$" + this.context.getPlayer().getAssets().getValue()
+                ],
                 GAME_SCREEN_GRID_TITLE_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
                 GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,

@@ -21,6 +21,12 @@ export class Revenue {
 
     }
 
+    getValue() {
+        return this.performanceBonus.getValue() +
+            this.salary.getValue() +
+            this.stockOptions.getValue();
+    }
+
     getPerformanceBonus() {
         return this.performanceBonus;
     }

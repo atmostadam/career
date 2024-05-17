@@ -2,6 +2,7 @@ import { AssetTableComponent } from "../component/AssetTableComponent.js";
 import { LiabilityTableComponent } from "../component/LiabilityTableComponent.js";
 import { RevenueTableComponent } from "../component/RevenueTableComponent.js";
 import { ExpenseTableComponent } from "../component/ExpenseTableComponent.js";
+import { FinancialSummaryComponent } from "../component/FinancialSummaryComponent.js";
 
 export class GameScreen {
     constructor(context) {
@@ -17,6 +18,7 @@ export class GameScreen {
         new LiabilityTableComponent(this.context).draw();
         new RevenueTableComponent(this.context).draw();
         new ExpenseTableComponent(this.context).draw();
+        new FinancialSummaryComponent(this.context).draw();
     }
     /*
 

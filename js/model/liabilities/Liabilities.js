@@ -25,6 +25,14 @@ export class Liabilities {
 
     }
 
+    getValue() {
+        return this.carLoan.getValue() +
+            this.creditCardBalance.getValue() +
+            this.homeEquityLoan.getValue() +
+            this.mortgage.getValue() +
+            this.studentLoan.getValue();
+    }
+
     getCarLoan() {
         return this.carLoan;
     }

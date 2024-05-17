@@ -9,7 +9,10 @@ import {
     GAME_SCREEN_GRID_TITLE_TYPE,
     GAME_SCREEN_GRID_TITLE_COLOR,
     GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
-    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y,
+    GAME_SCREEN_GRID_TEXT_TYPE,
+    GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+    GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
 } from "./../configuration/GameConfiguration.js";
 
 export class LiabilityTableComponent {
@@ -35,6 +38,73 @@ export class LiabilityTableComponent {
                 GAME_SCREEN_GRID_TITLE_COLOR,
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                1,
+                [
+                    this.context.getPlayer().getLiabilities().getCarLoan().getId(),
+                    "$" + this.context.getPlayer().getLiabilities().getCarLoan().getValue(),
+                    "PAY"
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                2,
+                [
+                    this.context.getPlayer().getLiabilities().getCreditCardBalance().getId(),
+                    "$" + this.context.getPlayer().getLiabilities().getCreditCardBalance().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                3,
+                [
+                    this.context.getPlayer().getLiabilities().getHomeEquityLoan().getId(),
+                    "$" + this.context.getPlayer().getLiabilities().getHomeEquityLoan().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                4,
+                [
+                    this.context.getPlayer().getLiabilities().getMortgage().getId(),
+                    "$" + this.context.getPlayer().getLiabilities().getMortgage().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                5,
+                [
+                    this.context.getPlayer().getLiabilities().getStudentLoan().getId(),
+                    "$" + this.context.getPlayer().getLiabilities().getStudentLoan().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                11,
+                [
+                    "TOTAL",
+                    "$" + this.context.getPlayer().getLiabilities().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
             )
             .build()
             .draw();

@@ -43,6 +43,23 @@ export class Expenses {
 
     }
 
+    getValue() {
+        return this.carMaintenance.getValue() +
+            this.carTax.getValue() +
+            this.college.getValue() +
+            this.costPerChild.getValue() +
+            this.employerFicaTax.getValue() +
+            this.ficaTax.getValue() +
+            this.gas.getValue() +
+            this.groceries.getValue() +
+            this.houseMaintenance.getValue() +
+            this.incomeTax.getValue() +
+            this.mortgagePayment.getValue() +
+            this.propertyTax.getValue() +
+            this.stateIncomeTax.getValue() +
+            this.utilities.getValue();
+    }
+
     getCarMaintenance() {
         return this.carMaintenance;
     }
@@ -97,5 +114,5 @@ export class Expenses {
 
     getUtilities() {
         return this.utilities;
-            }
+    }
 }

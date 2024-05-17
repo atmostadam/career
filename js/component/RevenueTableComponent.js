@@ -9,7 +9,10 @@ import {
     GAME_SCREEN_GRID_TITLE_TYPE,
     GAME_SCREEN_GRID_TITLE_COLOR,
     GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
-    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y,
+    GAME_SCREEN_GRID_TEXT_TYPE,
+    GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+    GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
 } from "./../configuration/GameConfiguration.js";
 
 export class RevenueTableComponent {
@@ -35,6 +38,50 @@ export class RevenueTableComponent {
                 GAME_SCREEN_GRID_TITLE_COLOR,
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
                 GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                1,
+                [
+                    this.context.getPlayer().getRevenue().getSalary().getId(),
+                    "$" + this.context.getPlayer().getRevenue().getSalary().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                2,
+                [
+                    this.context.getPlayer().getRevenue().getPerformanceBonus().getId(),
+                    "$" + this.context.getPlayer().getRevenue().getPerformanceBonus().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                3,
+                [
+                    this.context.getPlayer().getRevenue().getStockOptions().getId(),
+                    "$" + this.context.getPlayer().getRevenue().getStockOptions().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
+            )
+            .addRowText(
+                11,
+                [
+                    "TOTAL",
+                    "$" + this.context.getPlayer().getRevenue().getValue()
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
+                GAME_SCREEN_GRID_TITLE_COLOR,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
             )
             .build()
             .draw();

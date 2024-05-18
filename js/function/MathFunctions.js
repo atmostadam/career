@@ -26,3 +26,22 @@ export function sumArr(arr, index) {
     }
     return Number(sum);
 }
+
+export function between(num, min, max) {
+    if (num > min && num < max) {
+        return true;
+    }
+    return false;
+}
+
+export function insideRectangle(x, y, expectX, expectY, expectW, expectH) {
+    var w = expectX + expectW;
+    var h = expectY + expectH;
+
+    if (between(x, expectX, w) && between(y, expectY, h)) {
+        var inside = true;
+    } else {
+        var inside = false;
+    }
+    return inside;
+}

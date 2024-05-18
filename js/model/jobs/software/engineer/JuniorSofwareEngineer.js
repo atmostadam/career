@@ -4,7 +4,7 @@ import { SoftwareEngineerI } from "./SoftwareEngineerI.js";
 /* https://www.salary.com/research/salary/posting/junior-programmer-salary/atlanta-ga */
 export class JuniorSoftwareEngineer {
     constructor() {
-        this.title = "Junior";
+        this.title = "Junior Software Engineer";
         this.salary = 53594;
         this.performanceBonus = 2000;
         this.stockOptions = 0;
@@ -23,76 +23,12 @@ export class JuniorSoftwareEngineer {
         this.promotionChance = 60;
     }
 
-    get title() {
-        return this._title;
-    }
-
-    set title(title) {
-        this._title = title;
+    getTitle() {
+        return this.title;
     }
 
     getSalary() {
         return this.salary;
-    }
-
-    setSalary(salary) {
-        this.salary = salary;
-    }
-
-    get performanceBonus() {
-        return this._performanceBonus;
-    }
-
-    set performanceBonus(performanceBonus) {
-        this._performanceBonus = performanceBonus;
-    }
-
-    get stockOptions() {
-        return this._stockOptions;
-    }
-
-    set stockOptions(stockOptions) {
-        this._stockOptions = stockOptions;
-    }
-
-    get responsibilities() {
-        return this._responsibilities;
-    }
-
-    set responsibilities(responsibilities) {
-        this._responsibilities = responsibilities;
-    }
-
-    get jobImageId() {
-        return this._jobImageId;
-    }
-
-    set jobImageId(jobImageId) {
-        this._jobImageId = jobImageId;
-    }
-
-    get jobImageW() {
-        return this._jobImageW;
-    }
-
-    set jobImageW(jobImageW) {
-        this._jobImageW = jobImageW;
-    }
-
-    get jobImageH() {
-        return this._jobImageH;
-    }
-
-    set jobImageH(jobImageH) {
-        this._jobImageH = jobImageH;
-    }
-
-    get jobLevel() {
-        return this._jobLevel;
-    }
-
-    set jobLevel(jobLevel) {
-        this._jobLevel = jobLevel;
     }
 
     applyForPromotion() {

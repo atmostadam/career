@@ -21,6 +21,18 @@ export class ProfilePictureComponent {
         this.context = context;
     }
 
+    update(tick) {
+        this.tick = tick;
+    }
+
+    onMouseOver(x, y) {
+
+    }
+
+    onClick(x, y) {
+
+    }
+
     draw() {
         new ImageSquareDrawing(
             this.context,

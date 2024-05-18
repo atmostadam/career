@@ -20,6 +20,18 @@ export class AssetTableComponent {
         this.context = context;
     }
 
+    update(tick) {
+        this.tick = tick;
+    }
+
+    onMouseOver(x, y) {
+
+    }
+
+    onClick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,
@@ -165,7 +177,7 @@ export class AssetTableComponent {
                 [
                     "TOTAL",
                     "$" + this.context.getPlayer().getAssets().getValue(),
-                    "BUY"
+                    ""
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

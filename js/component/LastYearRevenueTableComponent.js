@@ -20,6 +20,18 @@ export class LastYearRevenueTableComponent {
         this.context = context;
     }
 
+    update(tick) {
+        this.tick = tick;
+    }
+
+    onMouseOver(x, y) {
+
+    }
+
+    onClick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,

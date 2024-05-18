@@ -13,6 +13,18 @@ export class FinancialSummaryComponent {
         this.context = context;
     }
 
+    update(tick) {
+        this.tick = tick;
+    }
+
+    onMouseOver(x, y) {
+
+    }
+
+    onClick(x, y) {
+
+    }
+
     draw() {
         new RectangleOutlineDrawing(
             this.context,

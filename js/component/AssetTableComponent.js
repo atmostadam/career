@@ -30,6 +30,7 @@ export class AssetTableComponent {
             .addBorderForAll(GAME_SCREEN_ASSET_PERCENT_BORDER, GAME_SCREEN_ASSET_COLOR)
             .addBackgroundForFirstRow(GAME_SCREEN_ASSET_COLOR)
             .addBackground(GAME_SCREEN_ASSET_PERCENT_H_ARRAY.length - 1, 1, GAME_SCREEN_ASSET_COLOR)
+            .addBackground(GAME_SCREEN_ASSET_PERCENT_H_ARRAY.length - 1, 2, GAME_SCREEN_ASSET_COLOR)
             .addText(
                 0,
                 0,
@@ -43,7 +44,8 @@ export class AssetTableComponent {
                 1,
                 [
                     this.context.getPlayer().getAssets().getBankAccount().getId(),
-                    "$" + this.context.getPlayer().getAssets().getBankAccount().getValue()
+                    "$" + this.context.getPlayer().getAssets().getBankAccount().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -66,7 +68,8 @@ export class AssetTableComponent {
                 3,
                 [
                     this.context.getPlayer().getAssets().getCertificateOfDeposit().getId(),
-                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getValue()
+                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -77,7 +80,8 @@ export class AssetTableComponent {
                 4,
                 [
                     this.context.getPlayer().getAssets().getCorporateBond().getId(),
-                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getValue()
+                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -88,7 +92,8 @@ export class AssetTableComponent {
                 5,
                 [
                     this.context.getPlayer().getAssets().getHouse().getId(),
-                    "$" + this.context.getPlayer().getAssets().getHouse().getValue()
+                    "$" + this.context.getPlayer().getAssets().getHouse().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -99,7 +104,8 @@ export class AssetTableComponent {
                 6,
                 [
                     this.context.getPlayer().getAssets().getNasdaqIndex().getId(),
-                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getValue()
+                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -110,7 +116,8 @@ export class AssetTableComponent {
                 7,
                 [
                     this.context.getPlayer().getAssets().getNyseIndex().getId(),
-                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getValue()
+                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -121,7 +128,8 @@ export class AssetTableComponent {
                 8,
                 [
                     this.context.getPlayer().getAssets().getSavingsAccount().getId(),
-                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getValue()
+                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -132,7 +140,8 @@ export class AssetTableComponent {
                 9,
                 [
                     this.context.getPlayer().getAssets().getSnp500Index().getId(),
-                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getValue()
+                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -143,7 +152,8 @@ export class AssetTableComponent {
                 10,
                 [
                     this.context.getPlayer().getAssets().getTreasuryBill().getId(),
-                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getValue()
+                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -154,7 +164,8 @@ export class AssetTableComponent {
                 11,
                 [
                     "TOTAL",
-                    "$" + this.context.getPlayer().getAssets().getValue()
+                    "$" + this.context.getPlayer().getAssets().getValue(),
+                    "BUY"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

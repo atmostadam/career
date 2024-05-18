@@ -37,7 +37,6 @@ export class GridDrawingBuilder {
                 size,
                 color
             ));
-        console.log(this);
         return this;
     }
 

@@ -1,11 +1,7 @@
 import { JuniorSoftwareEngineer } from "../model/jobs/software/engineer/JuniorSofwareEngineer.js";
-import { BankAccount } from "../model/assets/BankAccount.js";
 import { MouseListener } from "./../listener/MouseListener.js";
 import { Player } from "./../model/player/Player.js";
 import { GameScreen } from "./../screen/GameScreen.js";
-import { Salary } from "../model/revenue/Salary.js";
-import { StudentLoan } from "../model/liabilities/StudentLoan.js";
-import { MortgagePayment } from "../model/expenses/MortgagePayment.js";
 
 const images = new Map();
 
@@ -21,10 +17,6 @@ export async function loadImage(url) {
         .catch(e => console.error(e));
 }
 
-/**
- * The context for the game in reference to Inversion of Control, Shared Map Key/Values and Singleton
- * class lookup.
- */
 export class GameContext {
     constructor(canvas, ctx) {
         this.canvas = canvas;

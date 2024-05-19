@@ -25,6 +25,10 @@ export class FinancialSummaryComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new RectangleOutlineDrawing(
             this.context,

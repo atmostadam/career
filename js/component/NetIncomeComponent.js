@@ -1,4 +1,11 @@
 import { TextDrawing } from "../drawing/TextDrawing.js";
+import {
+    GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_PERCENT_X,
+    GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_PERCENT_Y,
+    GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_TYPE,
+    GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_POSITIVE_COLOR,
+    GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_NEGATIVE_COLOR
+} from "./../configuration/GameConfiguration.js";
 
 export class NetIcomeComponent {
     constructor(context) {
@@ -17,15 +24,19 @@ export class NetIcomeComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         let netIncome = this.context.getPlayer().getRevenue().getValue() - this.context.getPlayer().getExpenses().getValue();
         new TextDrawing(
             this.context,
             "$" + netIncome,
-            42,
-            82,
-            "50pt Helvetica",
-            netIncome > -1 ? "green" : "red"
+            GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_PERCENT_X,
+            GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_PERCENT_Y,
+            GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_TYPE,
+            netIncome > -1 ? GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_POSITIVE_COLOR : GAME_SCREEN_LAST_YEAR_NET_INCOME_TEXT_NEGATIVE_COLOR
         )
             .draw();
     }

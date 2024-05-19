@@ -33,6 +33,10 @@ export class ProfilePictureComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new ImageSquareDrawing(
             this.context,

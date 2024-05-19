@@ -1,7 +1,9 @@
 export class BaseAsset {
-    constructor(id, value, historicRateOfReturn, minRateOfReturn, maxRateOfReturn) {
+    constructor(id, value, amount, price, historicRateOfReturn, minRateOfReturn, maxRateOfReturn) {
         this.id = id;
         this.value = value;
+        this.amount = amount;
+        this.price = price;
         this.historicRateOfReturn = historicRateOfReturn;
         this.minRateOfReturn = minRateOfReturn;
         this.maxRateOfReturn = maxRateOfReturn;
@@ -31,6 +33,22 @@ export class BaseAsset {
 
     setValue(value) {
         this.value = value;
+    }
+
+    getAmount() {
+        return this.amount;
+    }
+
+    setAmount(amount) {
+        this.amount = amount;
+    }
+
+    getPrice() {
+        return this.price;
+    }
+
+    setPrice(price) {
+        this.price = price;
     }
 
     getHistoricRateOfReturn() {

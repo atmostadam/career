@@ -1,4 +1,15 @@
 import { TextDrawing } from "../drawing/TextDrawing.js";
+import {
+    GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_X,
+    GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_Y,
+    GAME_SCREEN_JOB_TITLE_TEXT_TYPE,
+    GAME_SCREEN_JOB_TITLE_TEXT_COLOR,
+    GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_X,
+    GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_Y,
+    GAME_SCREEN_JOB_TITLE_SALARY_TEXT_TYPE,
+    GAME_SCREEN_JOB_TITLE_SALARY_TEXT_COLOR
+} from "./../configuration/GameConfiguration.js";
+
 
 export class JobTitleComponent {
     constructor(context) {
@@ -17,23 +28,27 @@ export class JobTitleComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new TextDrawing(
             this.context,
             this.context.getPlayer().getJob().getTitle(),
-            42,
-            20,
-            "32pt Helvetica",
-            "white"
+            GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_X,
+            GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_Y,
+            GAME_SCREEN_JOB_TITLE_TEXT_TYPE,
+            GAME_SCREEN_JOB_TITLE_TEXT_COLOR
         )
             .draw();
         new TextDrawing(
             this.context,
             "$" + this.context.getPlayer().getJob().getSalary(),
-            42,
-            26,
-            "32pt Helvetica",
-            "green"
+            GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_X,
+            GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_Y,
+            GAME_SCREEN_JOB_TITLE_SALARY_TEXT_TYPE,
+            GAME_SCREEN_JOB_TITLE_SALARY_TEXT_COLOR
         )
             .draw();
     }

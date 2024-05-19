@@ -9,7 +9,9 @@ import {
     GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_H,
     GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_BORDER,
     GAME_SCREEN_NEXT_YEAR_BUTTON_COLOR,
-    GAME_SCREEN_NEXT_YEAR_BUTTON_BACKGROUND_COLOR,
+    GAME_SCREEN_NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR,
+    GAME_SCREEN_NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR,
+    GAME_SCREEN_NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR,
     GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT,
     GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_PERCENT_X,
     GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_PERCENT_Y,
@@ -29,7 +31,8 @@ await loadImage(IMAGE_PLAY_SRC);
 export class NextYearButtonComponent {
     constructor(context) {
         this.context = context;
-        this.backgroundColor = "black";
+        this.backgroundColor = GAME_SCREEN_NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
+        this.pressed = false;
     }
 
     update(tick) {
@@ -74,19 +77,30 @@ export class NextYearButtonComponent {
             .draw();
     }
 
-    onMouseOver() {
-        let x = this.context.getMouseListener().mousePositionX;
-        let y = this.context.getMouseListener().mousePositionY;
+    onMouseOver(x, y) {
+        this.setBackgroundColor(this.pressed, x, y);
+    }
+
+    onClick(x, y) {
+        this.setBackgroundColor(true, x, y);
+    }
+
+    onUnclick(x, y) {
+        this.setBackgroundColor(false, x, y);
+    }
+
+    setBackgroundColor(pressed, x, y) {
+        this.pressed = pressed;
         let expectX = this.context.getWidthPercent(GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_X)
         let expectY = this.context.getHeightPercent(GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_Y);
         let expectW = this.context.getWidthPercent(GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_W);
         let expectH = this.context.getHeightPercent(GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_H);
-        if (insideRectangle(x, y, expectX, expectY, expectW, expectH)) {
-            this.backgroundColor = "cyan";
+        if (pressed) {
+            this.backgroundColor = GAME_SCREEN_NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR;
+        } else if (insideRectangle(x, y, expectX, expectY, expectW, expectH)) {
+            this.backgroundColor = GAME_SCREEN_NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR;
         } else {
-            this.backgroundColor = "black";
+            this.backgroundColor = GAME_SCREEN_NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
         }
     }
-
-    onClick(x, y) { }
 }

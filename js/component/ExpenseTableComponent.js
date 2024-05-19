@@ -31,6 +31,10 @@ export class ExpenseTableComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,

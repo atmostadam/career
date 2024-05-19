@@ -32,6 +32,10 @@ export class RevenueTableComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,
@@ -42,14 +46,16 @@ export class RevenueTableComponent {
             .addBorderForAll(GAME_SCREEN_REVENUE_PERCENT_BORDER, GAME_SCREEN_REVENUE_COLOR)
             .addBackgroundForFirstRow(GAME_SCREEN_REVENUE_COLOR)
             .addBackground(GAME_SCREEN_REVENUE_PERCENT_H_ARRAY.length - 1, 1, GAME_SCREEN_REVENUE_COLOR)
-            .addText(
+            .addRowText(
                 0,
-                0,
-                "REVENUE",
-                GAME_SCREEN_GRID_TITLE_TYPE,
+                [
+                    "REVENUE",
+                    "$"
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
-                GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
-                GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
             )
             .addRowText(
                 1,

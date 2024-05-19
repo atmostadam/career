@@ -3,12 +3,21 @@ export class MouseListener {
         this.mousePositionX = context.getWidth();
         this.mousePositionY = context.getHeight();
 
-        window.addEventListener('click', e => {
+        window.addEventListener('mousedown', e => {
             var rect = context.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             if (null != context.getScreen()) {
                 context.getScreen().onClick(x, y);
+            }
+        });
+
+        window.addEventListener('mouseup', e => {
+            var rect = context.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            if (null != context.getScreen()) {
+                context.getScreen().onUnclick(x, y);
             }
         });
 

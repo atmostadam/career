@@ -32,6 +32,10 @@ export class LastYearRevenueTableComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,

@@ -46,4 +46,8 @@ export class GameScreen {
     onClick(x, y) {
         this.components.forEach(e => e.onClick(x, y));
     }
+
+    onUnclick(x, y) {
+        this.components.forEach(e => e.onUnclick(x, y));
+    }
 }

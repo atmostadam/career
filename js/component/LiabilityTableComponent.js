@@ -32,6 +32,10 @@ export class LiabilityTableComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
         new GridDrawingBuilder(
             this.context,
@@ -43,21 +47,25 @@ export class LiabilityTableComponent {
             .addBackgroundForFirstRow(GAME_SCREEN_LIABILITY_COLOR)
             .addBackground(GAME_SCREEN_LIABILITY_PERCENT_H_ARRAY.length - 1, 1, GAME_SCREEN_LIABILITY_COLOR)
             .addBackground(GAME_SCREEN_LIABILITY_PERCENT_H_ARRAY.length - 1, 2, GAME_SCREEN_LIABILITY_COLOR)
-            .addText(
+            .addRowText(
                 0,
-                0,
-                "LIABILITIES",
-                GAME_SCREEN_GRID_TITLE_TYPE,
+                [
+                    "LIABILITIES",
+                    "$"
+                ],
+                GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
-                GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
-                GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
+                GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
             )
             .addRowText(
                 1,
                 [
                     this.context.getPlayer().getLiabilities().getCarLoan().getId(),
                     "$" + this.context.getPlayer().getLiabilities().getCarLoan().getValue(),
-                    "PAY"
+                    "1%",
+                    "10%",
+                    "100%"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -69,7 +77,9 @@ export class LiabilityTableComponent {
                 [
                     this.context.getPlayer().getLiabilities().getCreditCardBalance().getId(),
                     "$" + this.context.getPlayer().getLiabilities().getCreditCardBalance().getValue(),
-                    "PAY"
+                    "1%",
+                    "10%",
+                    "100%"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -81,7 +91,9 @@ export class LiabilityTableComponent {
                 [
                     this.context.getPlayer().getLiabilities().getHomeEquityLoan().getId(),
                     "$" + this.context.getPlayer().getLiabilities().getHomeEquityLoan().getValue(),
-                    "PAY"
+                    "1%",
+                    "10%",
+                    "100%"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -93,7 +105,9 @@ export class LiabilityTableComponent {
                 [
                     this.context.getPlayer().getLiabilities().getMortgage().getId(),
                     "$" + this.context.getPlayer().getLiabilities().getMortgage().getValue(),
-                    "PAY"
+                    "1%",
+                    "10%",
+                    "100%"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -105,7 +119,9 @@ export class LiabilityTableComponent {
                 [
                     this.context.getPlayer().getLiabilities().getStudentLoan().getId(),
                     "$" + this.context.getPlayer().getLiabilities().getStudentLoan().getValue(),
-                    "PAY"
+                    "1%",
+                    "10%",
+                    "100%"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -116,8 +132,7 @@ export class LiabilityTableComponent {
                 11,
                 [
                     "TOTAL",
-                    "$" + this.context.getPlayer().getLiabilities().getValue(),
-                    "PAY"
+                    "$" + this.context.getPlayer().getLiabilities().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

@@ -15,6 +15,10 @@ export class LastYearNetIncomeComponent {
 
     }
 
+    onUnclick(x, y) {
+
+    }
+
     draw() {
 
     }

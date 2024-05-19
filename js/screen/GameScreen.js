@@ -10,20 +10,24 @@ import { LastYearExpenseTableComponent } from "../component/LastYearExpenseTable
 import { LastYearNetIncomeComponent } from "../component/LastYearNetIncomeComponent.js";
 import { JobTitleComponent } from "../component/JobTitleComponent.js";
 import { NetIcomeComponent } from "../component/NetIncomeComponent.js";
+import { AssetImageComponent } from "../component/AssetImageComponent.js";
+import { SalaryComponent } from "../component/SalaryComponent.js";
 
 export class GameScreen {
     constructor(context) {
         this.context = context;
         this.components = [
+            new SalaryComponent(this.context),
             new AssetTableComponent(this.context),
+            new AssetImageComponent(this.context),
             new LiabilityTableComponent(this.context),
             new RevenueTableComponent(this.context),
             new ExpenseTableComponent(this.context),
             new FinancialSummaryComponent(this.context),
             new NextYearButtonComponent(this.context),
             new ProfilePictureComponent(this.context),
-            new LastYearRevenueTableComponent(this.context),
-            new LastYearExpenseTableComponent(this.context),
+            //new LastYearRevenueTableComponent(this.context),
+            //new LastYearExpenseTableComponent(this.context),
             new LastYearNetIncomeComponent(this.context),
             new JobTitleComponent(this.context),
             new NetIcomeComponent(this.context)

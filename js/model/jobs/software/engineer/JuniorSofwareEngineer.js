@@ -6,7 +6,7 @@ export class JuniorSoftwareEngineer {
     constructor() {
         this.title = "Junior Software Engineer";
         this.salary = 53594;
-        this.performanceBonus = 2000;
+        this.bonus = 2000;
         this.stockOptions = 0;
         this.responsibilities = [];
         this.responsibilities.push("• Learns - Software and Analysis Design");
@@ -29,6 +29,14 @@ export class JuniorSoftwareEngineer {
 
     getSalary() {
         return this.salary;
+    }
+
+    getBonus() {
+        return this.bonus
+    }
+
+    getStockOptions() {
+        return this.stockOptions;
     }
 
     applyForPromotion() {

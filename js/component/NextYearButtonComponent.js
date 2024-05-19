@@ -1,5 +1,5 @@
 import { RectangleOutlineDrawing } from "../drawing/RectangleOutlineDrawing.js";
-import { ImageSquareDrawing } from "../drawing/ImageSquareDrawing.js";
+import { SquareImageDrawing } from "../drawing/SquareImageDrawing.js";
 import { insideRectangle } from "./../function/MathFunctions.js";
 import { TextDrawing } from "../drawing/TextDrawing.js";
 import {
@@ -48,7 +48,7 @@ export class NextYearButtonComponent {
             GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_H,
             this.backgroundColor)
             .draw();
-        new ImageSquareDrawing(
+        new SquareImageDrawing(
             this.context,
             IMAGE_PLAY_SRC,
             0,

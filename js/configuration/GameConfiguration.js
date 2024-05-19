@@ -1,11 +1,14 @@
 import { splitToEqualPartsArray } from "./../function/MathFunctions.js";
 
-
-
-
-
-
 export const GAME_SCREEN = "GameScreen";
+
+/** Menu. */
+export const ASSET_BUTTON_COMPONENT_PERCENT_X = 3;
+export const ASSET_BUTTON_COMPONENT_PERCENT_Y = 3;
+export const ASSET_BUTTON_COMPONENT_PERCENT_R = 24;
+export const ASSET_BUTTON_COMPONENT_COLOR = "yellow";
+export const ASSET_BUTTON_COMPONENT_PERCENT_BORDER = .2;
+export const ASSET_BUTTON_COMPONENT_BORDER_COLOR = "white";
 
 export const GAME_SCREEN_H_BORDER_PERCENT = 3;
 export const GAME_SCREEN_TOP_BORDER_PERCENT = 3;

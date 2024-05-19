@@ -2,6 +2,17 @@ import { JuniorSoftwareEngineer } from "../model/jobs/software/engineer/JuniorSo
 import { MouseListener } from "./../listener/MouseListener.js";
 import { Player } from "./../model/player/Player.js";
 import { GameScreen } from "./../screen/GameScreen.js";
+import { Menu } from "./../screen/Menu.js";
+import { Header } from "./../screen/Header.js";
+import { Footer } from "./../screen/Footer.js";
+import { ProfileScreen } from "./../screen/ProfileScreen.js";
+import { RevenueScreen } from "./../screen/RevenueScreen.js";
+import { ExpenseScreen } from "../screen/ExpenseScreen.js";
+import { AssetScreen } from "./../screen/AssetScreen.js";
+import { InvestmentScreen } from "./../screen/InvestmentScreen.js";
+import { LiabilityScreen } from "./../screen/LiabilityScreen.js";
+import { LoanScreen } from "./../screen/LoanScreen.js";
+import { LastYearScreen } from "./../screen/LastYearScreen.js";
 
 const images = new Map();
 
@@ -29,9 +40,19 @@ export class GameContext {
         this.player.getLiabilities().getStudentLoan().setValue(100000);
         this.player.getRevenue().getSalary().setValue(job.getSalary());
         this.player.getExpenses().getMortgagePayment().setValue(500);
-
-        this.screen = new GameScreen(this);
-
+        this.screens = new Map();
+        this.screens.set("Menu", new Menu(this));
+        this.screens.set("Header", new Header(this));
+        this.screens.set("Footer", new Footer(this));
+        this.screens.set("ProfileScreen", new ProfileScreen(this));
+        this.screens.set("RevenueScreen", new RevenueScreen(this));
+        this.screens.set("ExpenseScreen", new ExpenseScreen(this));
+        this.screens.set("AssetScreen", new AssetScreen(this));
+        this.screens.set("InvestmentScreen", new InvestmentScreen(this));
+        this.screens.set("LiabilityScreen", new LiabilityScreen(this));
+        this.screens.set("LoanScreen", new LoanScreen(this));
+        this.screens.set("LastYearScreen", new LastYearScreen(this));
+        this.screen = this.screens.get("ProfileScreen");
         this.BOTTOM_BROWSER_BUFFER = 100;
     }
 
@@ -57,6 +78,10 @@ export class GameContext {
 
     setPlayer(player) {
         this.player = player;
+    }
+
+    getScreens() {
+        return this.screens;
     }
 
     getScreen() {

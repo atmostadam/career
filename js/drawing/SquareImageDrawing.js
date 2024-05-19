@@ -1,4 +1,4 @@
-export class ImageSquareDrawing {
+export class SquareImageDrawing {
     constructor(context, imageSrc, ix, iy, wh, percentX, percentY, percentWH) {
         this.context = context;
         this.imageSrc = imageSrc;

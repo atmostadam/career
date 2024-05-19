@@ -1,5 +1,5 @@
 import { SquareOutlineDrawing } from "../drawing/SquareOutlineDrawing.js";
-import { ImageSquareDrawing } from "../drawing/ImageSquareDrawing.js";
+import { SquareImageDrawing } from "../drawing/SquareImageDrawing.js";
 import {
     IMAGE_FACE_RASPBERRY_SRC,
     IMAGE_FACE_RASPBERRY_WH,
@@ -38,7 +38,7 @@ export class ProfilePictureComponent {
     }
 
     draw() {
-        new ImageSquareDrawing(
+        new SquareImageDrawing(
             this.context,
             IMAGE_FACE_RASPBERRY_SRC,
             0,

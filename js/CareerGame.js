@@ -37,10 +37,10 @@ export class CareerGame {
     }
 
     update(tick) {
-        this.context.getScreen().update(tick);
+        this.context.getScreens().values().forEach(v => v.update(tick));
     }
 
     draw() {
-        this.context.getScreen().draw();
+        this.context.getScreens().values().forEach(v => v.draw());
     }
 }

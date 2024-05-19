@@ -1,4 +1,4 @@
-export class ImageDrawing {
+export class RectangleImageDrawing {
     constructor(context, imageSrc, ix, iy, w, h, percentX, percentY, percentW, percentH) {
         this.context = context;
         this.imageSrc = imageSrc;

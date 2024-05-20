@@ -1,9 +1,6 @@
-import { AssetButtonComponent } from "../component/button/AssetButtonComponent.js";
-
 export class AssetScreen {
     constructor(context) {
         this.context = context;
-        this.assetButton = new AssetButtonComponent(this.context);
     }
 
     update(tick) {
@@ -11,7 +8,7 @@ export class AssetScreen {
     }
 
     draw() {
-        this.assetButton.draw();
+
     }
 
     onMouseOver(x, y) {

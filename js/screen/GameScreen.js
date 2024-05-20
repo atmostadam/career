@@ -3,7 +3,7 @@ import { LiabilityTableComponent } from "../component/LiabilityTableComponent.js
 import { RevenueTableComponent } from "../component/RevenueTableComponent.js";
 import { ExpenseTableComponent } from "../component/ExpenseTableComponent.js";
 import { FinancialSummaryComponent } from "../component/FinancialSummaryComponent.js";
-import { NextYearButtonComponent } from "../component/NextYearButtonComponent.js";
+import { NextYearButtonComponent } from "../component/button/NextYearButtonComponent.js";
 import { ProfilePictureComponent } from "../component/ProfilePictureComponent.js";
 import { LastYearRevenueTableComponent } from "../component/LastYearRevenueTableComponent.js";
 import { LastYearExpenseTableComponent } from "../component/LastYearExpenseTableComponent.js";

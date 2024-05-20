@@ -3,12 +3,29 @@ import { splitToEqualPartsArray } from "./../function/MathFunctions.js";
 export const GAME_SCREEN = "GameScreen";
 
 /** Menu. */
-export const ASSET_BUTTON_COMPONENT_PERCENT_X = 3;
-export const ASSET_BUTTON_COMPONENT_PERCENT_Y = 3;
-export const ASSET_BUTTON_COMPONENT_PERCENT_R = 24;
-export const ASSET_BUTTON_COMPONENT_COLOR = "yellow";
-export const ASSET_BUTTON_COMPONENT_PERCENT_BORDER = .2;
-export const ASSET_BUTTON_COMPONENT_BORDER_COLOR = "white";
+export const MENU_BUTTON_COMPONENT_PERCENT_R = 4.2;
+export const MENU_BUTTON_COMPONENT_COLOR = "purple";
+export const MENU_BUTTON_COMPONENT_PERCENT_BORDER = .2;
+export const MENU_BUTTON_COMPONENT_BORDER_COLOR = "yellow";
+export const MENU_BUTTON_COMPONENT_PERCENT_X = 4;
+export const MENU_BUTTON_IMAGE_WH = 128;
+export const PROFILE_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/crowned-heart.png";
+export const PROFILE_BUTTON_COMPONENT_PERCENT_Y = 14;
+export const REVENUE_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/money-stack.png";
+export const REVENUE_BUTTON_COMPONENT_PERCENT_Y = 24;
+export const EXPENSE_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/shopping-cart.png";
+export const EXPENSE_BUTTON_COMPONENT_PERCENT_Y = 34;
+export const ASSET_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/open-treasure-chest.png";
+export const ASSET_BUTTON_COMPONENT_PERCENT_Y = 44;
+export const INVESTMENT_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/piggy-bank.png";
+export const INVESTMENT_BUTTON_COMPONENT_PERCENT_Y = 54;
+export const LIABILITY_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/checklist.png";
+export const LIABILITY_BUTTON_COMPONENT_PERCENT_Y = 64;
+export const LOAN_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/swipe-card.png";
+export const LOAN_BUTTON_COMPONENT_PERCENT_Y = 74;
+export const LAST_YEAR_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/chart.png";
+export const LAST_YEAR_BUTTON_COMPONENT_PERCENT_Y = 84;
+
 
 export const GAME_SCREEN_H_BORDER_PERCENT = 3;
 export const GAME_SCREEN_TOP_BORDER_PERCENT = 3;

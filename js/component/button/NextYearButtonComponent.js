@@ -1,7 +1,7 @@
-import { RectangleOutlineDrawing } from "../drawing/RectangleOutlineDrawing.js";
-import { SquareImageDrawing } from "../drawing/SquareImageDrawing.js";
-import { insideRectangle } from "./../function/MathFunctions.js";
-import { TextDrawing } from "../drawing/TextDrawing.js";
+import { RectangleOutlineDrawing } from "./../../drawing/RectangleOutlineDrawing.js";
+import { SquareImageDrawing } from "./../../drawing/SquareImageDrawing.js";
+import { insideRectangle } from "./../../function/MathFunctions.js";
+import { TextDrawing } from "./../../drawing/TextDrawing.js";
 import {
     GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_X,
     GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_Y,
@@ -22,9 +22,9 @@ import {
     IMAGE_PLAY_PERCENT_X,
     IMAGE_PLAY_PERCENT_Y,
     IMAGE_PLAY_PERCENT_WH
-} from "./../configuration/GameConfiguration.js";
-import { loadImage } from "./../context/GameContext.js";
-import { RectangleSolidDrawing } from "../drawing/RectangleSolidDrawing.js";
+} from "./../../configuration/GameConfiguration.js";
+import { loadImage } from "./../../context/GameContext.js";
+import { RectangleSolidDrawing } from "./../../drawing/RectangleSolidDrawing.js";
 
 await loadImage(IMAGE_PLAY_SRC);
 

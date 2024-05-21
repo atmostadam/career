@@ -2,6 +2,45 @@ import { splitToEqualPartsArray } from "./../function/MathFunctions.js";
 
 export const GAME_SCREEN = "GameScreen";
 
+/** Default Grid Settings. */
+export const GAME_SCREEN_GRID_TITLE_TYPE = "14pt Helvetica";
+export const GAME_SCREEN_GRID_TITLE_COLOR = "white";
+export const GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X = .3;
+export const GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y = 2.5;
+export const GAME_SCREEN_GRID_TEXT_TYPE = "12pt Helvetica";
+export const GAME_SCREEN_GRID_TEXT_COLOR = "white";
+export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X = .3;
+export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y = 2.5;
+
+/** Header. */
+export const HEADER_JOB_TITLE_TEXT_PERCENT_X = 2;
+export const HEADER_JOB_TITLE_TEXT_PERCENT_Y = 7;
+export const HEADER_JOB_TITLE_TEXT_TYPE = "40pt Helvetica";
+export const HEADER_JOB_TITLE_TEXT_COLOR = "white";
+export const HEADER_JOB_SALARY_TEXT_PERCENT_X = 42
+export const HEADER_JOB_SALARY_TEXT_PERCENT_Y = 7;
+export const HEADER_JOB_SALARYE_TEXT_TYPE = "40pt Helvetica";
+export const HEADER_JOB_SALARY_TEXT_COLOR = "green";
+export const NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR = "orange";
+export const NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR = "cyan";
+export const NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR = "green";
+export const NEXT_YEAR_BUTTON_PERCENT_X = 80;
+export const NEXT_YEAR_BUTTON_PERCENT_Y = 1;
+export const NEXT_YEAR_BUTTON_PERCENT_W = 17;
+export const NEXT_YEAR_BUTTON_PERCENT_H = 8;
+export const NEXT_YEAR_BUTTON_PERCENT_BORDER = .2;
+export const NEXT_YEAR_BUTTON_COLOR = "white";
+export const NEXT_YEAR_BUTTON_TEXT = "NEXT YEAR";
+export const NEXT_YEAR_BUTTON_TEXT_PERCENT_X = 81;
+export const NEXT_YEAR_BUTTON_TEXT_PERCENT_Y = 6.8;
+export const NEXT_YEAR_BUTTON_TEXT_FONT = "29pt Helvetica";
+export const NEXT_YEAR_BUTTON_TEXT_COLOR = "white";
+export const IMAGE_PLAY_SRC = "./images/opensource/gpl/papirus_icons/src/apps_ac3_player.svg";
+export const IMAGE_PLAY_WH = 192;
+export const IMAGE_PLAY_PERCENT_X = 93;
+export const IMAGE_PLAY_PERCENT_Y = 1;
+export const IMAGE_PLAY_PERCENT_WH = 8;
+
 /** Menu. */
 export const MENU_BUTTON_COMPONENT_PERCENT_R = 4.2;
 export const MENU_BUTTON_COMPONENT_COLOR = "purple";
@@ -26,32 +65,48 @@ export const LOAN_BUTTON_COMPONENT_PERCENT_Y = 74;
 export const LAST_YEAR_BUTTON_IMAGE_SRC = "./images/opensource/cc/game-icons-net/delapouite/chart.png";
 export const LAST_YEAR_BUTTON_COMPONENT_PERCENT_Y = 84;
 
+/** Main. */
+export const MAIN_SCREEN_PERCENT_X = 8;
+export const MAIN_SCREEN_PERCENT_Y = 10;
+export const MAIN_SCREEN_PERCENT_W = 89;
+export const MAIN_SCREEN_PERCENT_H = 79;
+export const MAIN_SCREEN_PERCENT_BORDER = .2;
+export const MAIN_SCREEN_COLOR = "white";
 
-export const GAME_SCREEN_H_BORDER_PERCENT = 3;
-export const GAME_SCREEN_TOP_BORDER_PERCENT = 3;
-export const GAME_SCREEN_BOTTOM_BORDER_PERCENT = 3;
+/** Footer. */
+export const FOOTER_REVENUE_TEXT_PERCENT_X = 2;
+export const FOOTER_REVENUE_TEXT_PERCENT_Y = 96;
+export const FOOTER_REVENUE_TEXT_TYPE = "40pt Helvetica";
+export const FOOTER_REVENUE_TEXT_COLOR = "green";
+export const FOOTER_EXPENSES_TEXT_PERCENT_X = 40;
+export const FOOTER_EXPENSES_TEXT_PERCENT_Y = 96;
+export const FOOTER_EXPENSES_TEXT_TYPE = "40pt Helvetica";
+export const FOOTER_EXPENSES_TEXT_COLOR = "red";
+export const FOOTER_CASH_TEXT_PERCENT_X = 74;
+export const FOOTER_CASH_TEXT_PERCENT_Y = 96;
+export const FOOTER_CASH_TEXT_TYPE = "40pt Helvetica";
+export const FOOTER_CASH_TEXT_COLOR = "green";
 
-/** Default Grid Settings. */
-export const GAME_SCREEN_GRID_TITLE_TYPE = "14pt Helvetica";
-export const GAME_SCREEN_GRID_TITLE_COLOR = "white";
-export const GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X = .3;
-export const GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y = 2.5;
-export const GAME_SCREEN_GRID_TEXT_TYPE = "12pt Helvetica";
-export const GAME_SCREEN_GRID_TEXT_COLOR = "white";
-export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X = .3;
-export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y = 2.5;
-
-/** Profile Picture. */
-export const GAME_SCREEN_PROFILE_PICTURE_PERCENT_X = 3;
-export const GAME_SCREEN_PROFILE_PICTURE_PERCENT_Y = 3;
-export const GAME_SCREEN_PROFILE_PICTURE_PERCENT_WH = 24;
-export const GAME_SCREEN_PROFILE_PICTURE_PERCENT_BORDER = .2;
-export const GAME_SCREEN_PROFILE_PICTURE_COLOR = "white";
+/** Profile Screen. */
+export const PROFILE_SCREEN_PICTURE_PERCENT_X = 9;
+export const PROFILE_SCREEN_PICTURE_PERCENT_Y = 12;
+export const PROFILE_SCREEN_PICTURE_PERCENT_WH = 24;
+export const PROFILE_SCREEN_PICTURE_PERCENT_BORDER = .2;
+export const PROFILE_SCREEN_PICTURE_COLOR = "white";
 export const IMAGE_FACE_RASPBERRY_SRC = "./images/opensource/gpl/papirus-icon-theme/48x48/emotes/face-raspberry.svg";
 export const IMAGE_FACE_RASPBERRY_WH = 48;
-export const IMAGE_FACE_RASPBERRY_PERCENT_X = 3;
-export const IMAGE_FACE_RASPBERRY_PERCENT_Y = 3;
+export const IMAGE_FACE_RASPBERRY_PERCENT_X = 9;
+export const IMAGE_FACE_RASPBERRY_PERCENT_Y = 12;
 export const IMAGE_FACE_RASPBERRY_PERCENT_WH = 24;
+export const PROFILE_SCREEN_TITLE_PERCENT_X = 21;
+export const PROFILE_SCREEN_TITLE_PERCENT_Y = 18;
+export const PROFILE_SCREEN_TITLE_TEXT = "50pt Helvetica";
+export const PROFILE_SCREEN_TITLE_COLOR = "white";
+export const PROFILE_SCREEN_DESCRIPTION_PERCENT_X = 21;
+export const PROFILE_SCREEN_DESCRIPTION_PERCENT_Y = 24;
+export const PROFILE_SCREEN_DESCRIPTION_PERCENT_Y_SPACING = 6;
+export const PROFILE_SCREEN_DESCRIPTION_TEXT = "26pt Helvetica";
+export const PROFILE_SCREEN_DESCRIPTION_COLOR = "white";
 
 /** Job Title & Salary */
 export const GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_X = 14;
@@ -64,25 +119,7 @@ export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_TYPE = "32pt Helvetica";
 export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_COLOR = "green";
 
 /** Next Year Button */
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR = "black";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR = "cyan";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR = "green";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_X = 80;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_Y = 3;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_W = 17;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_H = 8;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_PERCENT_BORDER = .2;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_COLOR = "white";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT = "NEXT YEAR";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_PERCENT_X = 81;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_PERCENT_Y = 8.8;
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_FONT = "29pt Helvetica";
-export const GAME_SCREEN_NEXT_YEAR_BUTTON_TEXT_COLOR = "white";
-export const IMAGE_PLAY_SRC = "./images/opensource/gpl/papirus_icons/src/apps_ac3_player.svg";
-export const IMAGE_PLAY_WH = 192;
-export const IMAGE_PLAY_PERCENT_X = 93;
-export const IMAGE_PLAY_PERCENT_Y = 3;
-export const IMAGE_PLAY_PERCENT_WH = 8;
+
 
 /** Asset Table Component. */
 export const GAME_SCREEN_ASSET_PERCENT_X = 2;

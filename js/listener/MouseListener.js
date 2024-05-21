@@ -8,7 +8,7 @@ export class MouseListener {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             if (null != context.getScreen()) {
-                context.getScreen().onClick(x, y);
+                context.getScreens().forEach(e => e.onClick(x, y));
             }
         });
 
@@ -17,7 +17,7 @@ export class MouseListener {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             if (null != context.getScreen()) {
-                context.getScreen().onUnclick(x, y);
+                context.getScreens().forEach(e => e.onUnclick(x, y));
             }
         });
 
@@ -26,7 +26,7 @@ export class MouseListener {
             this.mousePositionX = e.clientX - rect.left;
             this.mousePositionY = e.clientY - rect.top;
             if (null != context.getScreen()) {
-                context.getScreen().onMouseOver(this.mousePositionX, this.mousePositionY);
+                context.getScreens().forEach(e => e.onMouseOver(this.mousePositionX, this.mousePositionY));
             }
         });
 

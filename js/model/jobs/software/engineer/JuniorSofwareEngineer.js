@@ -39,6 +39,10 @@ export class JuniorSoftwareEngineer {
         return this.stockOptions;
     }
 
+    getResponsibilities() {
+        return this.responsibilities;
+    }
+
     applyForPromotion() {
         if (randomInt(0, 100) <= this._promotionChance) {
             return new SoftwareEngineerI();

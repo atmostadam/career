@@ -22,6 +22,14 @@ export class Menu {
 
     update(tick) {
         this.tick = tick;
+        this.profileButton.update(tick);
+        this.revenueButton.update(tick);
+        this.expenseButton.update(tick);
+        this.assetButton.update(tick);
+        this.investmentScreen.update(tick);
+        this.liabilityScreen.update(tick);
+        this.loanScreen.update(tick);
+        this.lastYearScreen.update(tick);
     }
 
     draw() {
@@ -36,14 +44,35 @@ export class Menu {
     }
 
     onMouseOver(x, y) {
-
+        this.profileButton.onMouseOver(x, y);
+        this.revenueButton.onMouseOver(x, y);
+        this.expenseButton.onMouseOver(x, y);
+        this.assetButton.onMouseOver(x, y);
+        this.investmentScreen.onMouseOver(x, y);
+        this.liabilityScreen.onMouseOver(x, y);
+        this.loanScreen.onMouseOver(x, y);
+        this.lastYearScreen.onMouseOver(x, y);
     }
 
     onClick(x, y) {
-
+        this.profileButton.onClick(x, y);
+        this.revenueButton.onClick(x, y);
+        this.expenseButton.onClick(x, y);
+        this.assetButton.onClick(x, y);
+        this.investmentScreen.onClick(x, y);
+        this.liabilityScreen.onClick(x, y);
+        this.loanScreen.onClick(x, y);
+        this.lastYearScreen.onClick(x, y)
     }
 
     onUnclick(x, y) {
-
+        this.profileButton.onUnclick(x, y);
+        this.revenueButton.onUnclick(x, y);
+        this.expenseButton.onUnclick(x, y);
+        this.assetButton.onUnclick(x, y);
+        this.investmentScreen.onUnclick(x, y);
+        this.liabilityScreen.onUnclick(x, y);
+        this.loanScreen.onUnclick(x, y);
+        this.lastYearScreen.onUnclick(x, y);
     }
 }

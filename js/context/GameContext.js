@@ -1,7 +1,6 @@
 import { JuniorSoftwareEngineer } from "../model/jobs/software/engineer/JuniorSofwareEngineer.js";
 import { MouseListener } from "./../listener/MouseListener.js";
 import { Player } from "./../model/player/Player.js";
-import { GameScreen } from "./../screen/GameScreen.js";
 import { Menu } from "./../screen/Menu.js";
 import { Header } from "./../screen/Header.js";
 import { Footer } from "./../screen/Footer.js";
@@ -13,6 +12,7 @@ import { InvestmentScreen } from "./../screen/InvestmentScreen.js";
 import { LiabilityScreen } from "./../screen/LiabilityScreen.js";
 import { LoanScreen } from "./../screen/LoanScreen.js";
 import { LastYearScreen } from "./../screen/LastYearScreen.js";
+import { MainScreen } from "../screen/MainScreen.js";
 
 const images = new Map();
 
@@ -43,6 +43,7 @@ export class GameContext {
         this.screens = new Map();
         this.screens.set("Menu", new Menu(this));
         this.screens.set("Header", new Header(this));
+        this.screens.set("MainScreen", new MainScreen(this));
         this.screens.set("Footer", new Footer(this));
         this.screens.set("ProfileScreen", new ProfileScreen(this));
         this.screens.set("RevenueScreen", new RevenueScreen(this));

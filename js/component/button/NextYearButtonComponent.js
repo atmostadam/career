@@ -21,7 +21,8 @@ import {
     IMAGE_PLAY_WH,
     IMAGE_PLAY_PERCENT_X,
     IMAGE_PLAY_PERCENT_Y,
-    IMAGE_PLAY_PERCENT_WH
+    IMAGE_PLAY_PERCENT_WH,
+    LAST_YEAR_SCREEN
 } from "./../../configuration/GameConfiguration.js";
 import { loadImage } from "./../../context/GameContext.js";
 import { RectangleSolidDrawing } from "./../../drawing/RectangleSolidDrawing.js";
@@ -98,6 +99,9 @@ export class NextYearButtonComponent {
             this.backgroundColor = NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
             this.pressed = false;
             return;
+        }
+        if (this.pressed == true && pressed == false) {
+            this.context.setScreen(LAST_YEAR_SCREEN);
         }
         this.pressed = pressed;
         if (pressed) {

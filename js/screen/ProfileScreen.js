@@ -9,7 +9,8 @@ import {
     PROFILE_SCREEN_DESCRIPTION_PERCENT_Y,
     PROFILE_SCREEN_DESCRIPTION_PERCENT_Y_SPACING,
     PROFILE_SCREEN_DESCRIPTION_TEXT,
-    PROFILE_SCREEN_DESCRIPTION_COLOR
+    PROFILE_SCREEN_DESCRIPTION_COLOR,
+    PROFILE_SCREEN
 } from "./../configuration/GameConfiguration.js";
 
 export class ProfileScreen {
@@ -23,6 +24,9 @@ export class ProfileScreen {
     }
 
     draw() {
+        if (PROFILE_SCREEN != this.context.getScreen()) {
+            return;
+        }
         this.profilePicture.draw();
         new TextDrawing(
             this.context,

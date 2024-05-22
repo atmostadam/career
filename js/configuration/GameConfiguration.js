@@ -1,6 +1,17 @@
 import { splitToEqualPartsArray } from "./../function/MathFunctions.js";
 
-export const GAME_SCREEN = "GameScreen";
+export const ASSET_SCREEN = "AssetScreen";
+export const EXPENSE_SCREEN = "ExpenseScreen";
+export const FOOTER = "Footer";
+export const HEADER = "Header";
+export const INVESTMENT_SCREEN = "InvestmentScreen";
+export const LAST_YEAR_SCREEN = "LastYearScreen";
+export const LIABILITY_SCREEN = "LiabilityScreen";
+export const LOAN_SCREEN = "LoanScreen";
+export const MAIN_SCREEN = "MainScreen";
+export const MENU = "Menu";
+export const PROFILE_SCREEN = "ProfileScreen";
+export const REVENUE_SCREEN = "RevenueScreen";
 
 /** Default Grid Settings. */
 export const GAME_SCREEN_GRID_TITLE_TYPE = "14pt Helvetica";
@@ -109,6 +120,7 @@ export const PROFILE_SCREEN_DESCRIPTION_TEXT = "26pt Helvetica";
 export const PROFILE_SCREEN_DESCRIPTION_COLOR = "white";
 
 /** Job Title & Salary */
+/*
 export const GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_X = 14;
 export const GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_Y = 7;
 export const GAME_SCREEN_JOB_TITLE_TEXT_TYPE = "32pt Helvetica";
@@ -117,17 +129,25 @@ export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_X = 14;
 export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_Y = 13;
 export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_TYPE = "32pt Helvetica";
 export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_COLOR = "green";
+*/
 
 /** Next Year Button */
 
+/** Revenue Table Component. */
+export const REVENUE_TABLE_COMPONENT_PERCENT_X = 30;
+export const REVENUE_TABLE_COMPONENT_PERCENT_Y = 16;
+export const REVENUE_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5];
+export const REVENUE_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const REVENUE_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const REVENUE_TABLE_COMPONENT_COLOR = "green";
 
 /** Asset Table Component. */
-export const GAME_SCREEN_ASSET_PERCENT_X = 2;
-export const GAME_SCREEN_ASSET_PERCENT_Y = 60;
-export const GAME_SCREEN_ASSET_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
-export const GAME_SCREEN_ASSET_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
-export const GAME_SCREEN_ASSET_PERCENT_BORDER = .2;
-export const GAME_SCREEN_ASSET_COLOR = "green";
+export const ASSET_TABLE_COMPONENT_PERCENT_X = 30;
+export const ASSET_TABLE_COMPONENT_PERCENT_Y = 16;
+export const ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const ASSET_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const ASSET_TABLE_COMPONENT_COLOR = "green";
 
 /** Salary Component. */
 export const GAME_SCREEN_SALARY_TITLE_TEXT_PERCENT_X = 3;
@@ -169,13 +189,6 @@ export const GAME_SCREEN_LIABILITY_PERCENT_W_ARRAY = [9, 5, 1.5, 2.2, 2.5];
 export const GAME_SCREEN_LIABILITY_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
 export const GAME_SCREEN_LIABILITY_PERCENT_BORDER = .2;
 export const GAME_SCREEN_LIABILITY_COLOR = "red";
-
-export const GAME_SCREEN_REVENUE_PERCENT_X = 2;
-export const GAME_SCREEN_REVENUE_PERCENT_Y = 60;
-export const GAME_SCREEN_REVENUE_PERCENT_W_ARRAY = [9, 5];
-export const GAME_SCREEN_REVENUE_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
-export const GAME_SCREEN_REVENUE_PERCENT_BORDER = .2;
-export const GAME_SCREEN_REVENUE_COLOR = "green";
 
 export const GAME_SCREEN_EXPENSE_PERCENT_X = 84.2;
 export const GAME_SCREEN_EXPENSE_PERCENT_Y = 60;

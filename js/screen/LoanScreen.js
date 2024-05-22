@@ -1,3 +1,7 @@
+import {
+    LOAN_SCREEN
+} from "./../configuration/GameConfiguration.js";
+
 export class LoanScreen {
     constructor(context) {
         this.context = context;
@@ -8,7 +12,9 @@ export class LoanScreen {
     }
 
     draw() {
-
+        if (LOAN_SCREEN != this.context.getScreen()) {
+            return;
+        }
     }
 
     onMouseOver(x, y) {

@@ -13,6 +13,20 @@ import { LiabilityScreen } from "./../screen/LiabilityScreen.js";
 import { LoanScreen } from "./../screen/LoanScreen.js";
 import { LastYearScreen } from "./../screen/LastYearScreen.js";
 import { MainScreen } from "../screen/MainScreen.js";
+import {
+    ASSET_SCREEN,
+    EXPENSE_SCREEN,
+    FOOTER,
+    HEADER,
+    INVESTMENT_SCREEN,
+    LAST_YEAR_SCREEN,
+    LIABILITY_SCREEN,
+    LOAN_SCREEN,
+    MAIN_SCREEN,
+    MENU,
+    PROFILE_SCREEN,
+    REVENUE_SCREEN
+} from "./../configuration/GameConfiguration.js";
 
 const images = new Map();
 
@@ -41,19 +55,19 @@ export class GameContext {
         this.player.getRevenue().getSalary().setValue(job.getSalary());
         this.player.getExpenses().getMortgagePayment().setValue(500);
         this.screens = new Map();
-        this.screens.set("Menu", new Menu(this));
-        this.screens.set("Header", new Header(this));
-        this.screens.set("MainScreen", new MainScreen(this));
-        this.screens.set("Footer", new Footer(this));
-        this.screens.set("ProfileScreen", new ProfileScreen(this));
-        this.screens.set("RevenueScreen", new RevenueScreen(this));
-        this.screens.set("ExpenseScreen", new ExpenseScreen(this));
-        this.screens.set("AssetScreen", new AssetScreen(this));
-        this.screens.set("InvestmentScreen", new InvestmentScreen(this));
-        this.screens.set("LiabilityScreen", new LiabilityScreen(this));
-        this.screens.set("LoanScreen", new LoanScreen(this));
-        this.screens.set("LastYearScreen", new LastYearScreen(this));
-        this.screen = this.screens.get("ProfileScreen");
+        this.screens.set(MENU, new Menu(this));
+        this.screens.set(HEADER, new Header(this));
+        this.screens.set(MAIN_SCREEN, new MainScreen(this));
+        this.screens.set(FOOTER, new Footer(this));
+        this.screens.set(PROFILE_SCREEN, new ProfileScreen(this));
+        this.screens.set(REVENUE_SCREEN, new RevenueScreen(this));
+        this.screens.set(EXPENSE_SCREEN, new ExpenseScreen(this));
+        this.screens.set(ASSET_SCREEN, new AssetScreen(this));
+        this.screens.set(INVESTMENT_SCREEN, new InvestmentScreen(this));
+        this.screens.set(LIABILITY_SCREEN, new LiabilityScreen(this));
+        this.screens.set(LOAN_SCREEN, new LoanScreen(this));
+        this.screens.set(LAST_YEAR_SCREEN, new LastYearScreen(this));
+        this.setScreen(PROFILE_SCREEN);
         this.BOTTOM_BROWSER_BUFFER = 100;
     }
 

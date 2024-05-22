@@ -16,6 +16,7 @@ import {
     NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR,
     NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR,
     NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR,
+    LIABILITY_SCREEN
 } from "../../configuration/GameConfiguration.js";
 import { loadImage } from "./../../context/GameContext.js";
 import { SquareImageDrawing } from "../../drawing/SquareImageDrawing.js";
@@ -80,18 +81,20 @@ export class LiabilityButtonComponent {
     }
 
     setBackgroundColor(pressed, x, y) {
-        let expectPercentX = MENU_BUTTON_COMPONENT_PERCENT_X - (MENU_BUTTON_COMPONENT_PERCENT_R * 0.35);
-        let expectPercentY = LIABILITY_BUTTON_COMPONENT_PERCENT_Y - (MENU_BUTTON_COMPONENT_PERCENT_R * .85);
-        let expectPercentW = MENU_BUTTON_COMPONENT_PERCENT_R * 1.6;
-        let expectPercentH = MENU_BUTTON_COMPONENT_PERCENT_R * 1.6;
-        let expectX = this.context.getWidthPercent(expectPercentX)
-        let expectY = this.context.getHeightPercent(expectPercentY);
-        let expectW = this.context.getHeightPercent(expectPercentW);
-        let expectH = this.context.getHeightPercent(expectPercentH);
+        let expectPercentX = MENU_BUTTON_COMPONENT_PERCENT_X;
+        let expectPercentY = LIABILITY_BUTTON_COMPONENT_PERCENT_Y;
+        let expectPercentWH = MENU_BUTTON_COMPONENT_PERCENT_R * 2;
+        let expectX = this.context.getWidthPercent(expectPercentX) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
+        let expectY = this.context.getHeightPercent(expectPercentY) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
+        let expectW = this.context.getHeightPercent(expectPercentWH);
+        let expectH = this.context.getHeightPercent(expectPercentWH);
         if (!insideRectangle(x, y, expectX, expectY, expectW, expectH)) {
             this.backgroundColor = NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
             this.pressed = false;
             return;
+        }
+        if (this.pressed == true && pressed == false) {
+            this.context.setScreen(LIABILITY_SCREEN);
         }
         this.pressed = pressed;
         if (pressed) {

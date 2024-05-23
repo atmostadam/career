@@ -1,3 +1,5 @@
+import { SquareSolidDrawing } from "./SquareSolidDrawing.js";
+
 export class CircleSolidDrawing {
     constructor(context, percentX, percentY, percentR, color) {
         this.context = context;

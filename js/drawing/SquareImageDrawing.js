@@ -1,3 +1,5 @@
+import { SquareSolidDrawing } from "./SquareSolidDrawing.js";
+
 export class SquareImageDrawing {
     constructor(context, imageSrc, ix, iy, wh, percentX, percentY, percentWH) {
         this.context = context;

@@ -76,10 +76,8 @@ export class InvestmentButtonComponent {
     }
 
     setBackgroundColor(pressed, x, y) {
-        let expectPercentX = MENU_BUTTON_COMPONENT_PERCENT_X;
-        let expectPercentY = INVESTMENT_BUTTON_COMPONENT_PERCENT_Y;
-        let expectX = this.context.getWidthPercent(expectPercentX) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
-        let expectY = this.context.getHeightPercent(expectPercentY);
+        let expectX = this.context.getWidthPercent(MENU_BUTTON_COMPONENT_PERCENT_X) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
+        let expectY = this.context.getHeightPercent(INVESTMENT_BUTTON_COMPONENT_PERCENT_Y);
         let expectW = this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R * 2);
         let expectH = this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R * 2.5);
         if (!insideRectangle(x, y, expectX, expectY, expectW, expectH)) {

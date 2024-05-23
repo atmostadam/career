@@ -119,20 +119,6 @@ export const PROFILE_SCREEN_DESCRIPTION_PERCENT_Y_SPACING = 6;
 export const PROFILE_SCREEN_DESCRIPTION_TEXT = "26pt Helvetica";
 export const PROFILE_SCREEN_DESCRIPTION_COLOR = "white";
 
-/** Job Title & Salary */
-/*
-export const GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_X = 14;
-export const GAME_SCREEN_JOB_TITLE_TEXT_PERCENT_Y = 7;
-export const GAME_SCREEN_JOB_TITLE_TEXT_TYPE = "32pt Helvetica";
-export const GAME_SCREEN_JOB_TITLE_TEXT_COLOR = "white";
-export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_X = 14;
-export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_PERCENT_Y = 13;
-export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_TYPE = "32pt Helvetica";
-export const GAME_SCREEN_JOB_TITLE_SALARY_TEXT_COLOR = "green";
-*/
-
-/** Next Year Button */
-
 /** Revenue Table Component. */
 export const REVENUE_TABLE_COMPONENT_PERCENT_X = 30;
 export const REVENUE_TABLE_COMPONENT_PERCENT_Y = 16;
@@ -140,6 +126,14 @@ export const REVENUE_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5];
 export const REVENUE_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
 export const REVENUE_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const REVENUE_TABLE_COMPONENT_COLOR = "green";
+
+/** Expense Table Component. */
+export const EXPENSE_TABLE_COMPONENT_PERCENT_X = 30;
+export const EXPENSE_TABLE_COMPONENT_PERCENT_Y = 16;
+export const EXPENSE_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5];
+export const EXPENSE_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const EXPENSE_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const EXPENSE_TABLE_COMPONENT_COLOR = "red";
 
 /** Asset Table Component. */
 export const ASSET_TABLE_COMPONENT_PERCENT_X = 30;
@@ -190,12 +184,7 @@ export const GAME_SCREEN_LIABILITY_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 
 export const GAME_SCREEN_LIABILITY_PERCENT_BORDER = .2;
 export const GAME_SCREEN_LIABILITY_COLOR = "red";
 
-export const GAME_SCREEN_EXPENSE_PERCENT_X = 84.2;
-export const GAME_SCREEN_EXPENSE_PERCENT_Y = 60;
-export const GAME_SCREEN_EXPENSE_PERCENT_W_ARRAY = [9, 5];
-export const GAME_SCREEN_EXPENSE_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
-export const GAME_SCREEN_EXPENSE_PERCENT_BORDER = .2;
-export const GAME_SCREEN_EXPENSE_COLOR = "red";
+
 
 export const GAME_SCREEN_FINANCIALS_PERCENT_X = 2;
 export const GAME_SCREEN_FINANCIALS_PERCENT_Y = 2;

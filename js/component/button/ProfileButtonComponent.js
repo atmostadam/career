@@ -6,13 +6,8 @@ import {
     MENU_BUTTON_IMAGE_WH,
     MENU_BUTTON_COMPONENT_PERCENT_X,
     MENU_BUTTON_COMPONENT_PERCENT_R,
-    MENU_BUTTON_COMPONENT_COLOR,
     MENU_BUTTON_COMPONENT_PERCENT_BORDER,
     MENU_BUTTON_COMPONENT_BORDER_COLOR,
-    NEXT_YEAR_BUTTON_PERCENT_X,
-    NEXT_YEAR_BUTTON_PERCENT_Y,
-    NEXT_YEAR_BUTTON_PERCENT_W,
-    NEXT_YEAR_BUTTON_PERCENT_H,
     NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR,
     NEXT_YEAR_BUTTON_ON_MOUSE_OVER_BACKGROUND_COLOR,
     NEXT_YEAR_BUTTON_ON_CLICK_BACKGROUND_COLOR,
@@ -83,11 +78,10 @@ export class ProfileButtonComponent {
     setBackgroundColor(pressed, x, y) {
         let expectPercentX = MENU_BUTTON_COMPONENT_PERCENT_X;
         let expectPercentY = PROFILE_BUTTON_COMPONENT_PERCENT_Y;
-        let expectPercentWH = MENU_BUTTON_COMPONENT_PERCENT_R * 2;
         let expectX = this.context.getWidthPercent(expectPercentX) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
-        let expectY = this.context.getHeightPercent(expectPercentY) - this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R);
-        let expectW = this.context.getHeightPercent(expectPercentWH);
-        let expectH = this.context.getHeightPercent(expectPercentWH);
+        let expectY = this.context.getHeightPercent(expectPercentY);
+        let expectW = this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R * 2);
+        let expectH = this.context.getHeightPercent(MENU_BUTTON_COMPONENT_PERCENT_R * 2.5);
         if (!insideRectangle(x, y, expectX, expectY, expectW, expectH)) {
             this.backgroundColor = NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
             this.pressed = false;

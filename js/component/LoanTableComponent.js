@@ -1,11 +1,11 @@
-import { GridDrawingBuilder } from "./../drawing/GridDrawingBuilder.js";
+import { GridDrawingBuilder } from "../drawing/GridDrawingBuilder.js";
 import {
-    LIABILITY_TABLE_COMPONENT_PERCENT_X,
-    LIABILITY_TABLE_COMPONENT_PERCENT_Y,
-    LIABILITY_TABLE_COMPONENT_PERCENT_W_ARRAY,
-    LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY,
-    LIABILITY_TABLE_COMPONENT_PERCENT_BORDER,
-    LIABILITY_TABLE_COMPONENT_COLOR,
+    LOAN_TABLE_COMPONENT_PERCENT_X,
+    LOAN_TABLE_COMPONENT_PERCENT_Y,
+    LOAN_TABLE_COMPONENT_PERCENT_W_ARRAY,
+    LOAN_TABLE_COMPONENT_PERCENT_H_ARRAY,
+    LOAN_TABLE_COMPONENT_PERCENT_BORDER,
+    LOAN_TABLE_COMPONENT_COLOR,
     GAME_SCREEN_GRID_TITLE_TYPE,
     GAME_SCREEN_GRID_TITLE_COLOR,
     GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
@@ -13,9 +13,9 @@ import {
     GAME_SCREEN_GRID_TEXT_TYPE,
     GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
     GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
-} from "./../configuration/GameConfiguration.js";
+} from "../configuration/GameConfiguration.js";
 
-export class LiabilityTableComponent {
+export class LoanTableComponent {
     constructor(context) {
         this.context = context;
     }
@@ -37,16 +37,17 @@ export class LiabilityTableComponent {
     }
 
     draw() {
+        // TODO: Borrow & Pay Off
         new GridDrawingBuilder(
             this.context,
-            LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY,
-            LIABILITY_TABLE_COMPONENT_PERCENT_W_ARRAY)
-            .addPercentX(LIABILITY_TABLE_COMPONENT_PERCENT_X)
-            .addPercentY(LIABILITY_TABLE_COMPONENT_PERCENT_Y)
-            .addBorderForAll(LIABILITY_TABLE_COMPONENT_PERCENT_BORDER, LIABILITY_TABLE_COMPONENT_COLOR)
-            .addBackgroundForFirstRow(LIABILITY_TABLE_COMPONENT_COLOR)
-            .addBackground(LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 1, LIABILITY_TABLE_COMPONENT_COLOR)
-            .addBackground(LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, LIABILITY_TABLE_COMPONENT_COLOR)
+            LOAN_TABLE_COMPONENT_PERCENT_H_ARRAY,
+            LOAN_TABLE_COMPONENT_PERCENT_W_ARRAY)
+            .addPercentX(LOAN_TABLE_COMPONENT_PERCENT_X)
+            .addPercentY(LOAN_TABLE_COMPONENT_PERCENT_Y)
+            .addBorderForAll(LOAN_TABLE_COMPONENT_PERCENT_BORDER, LOAN_TABLE_COMPONENT_COLOR)
+            .addBackgroundForFirstRow(LOAN_TABLE_COMPONENT_COLOR)
+            .addBackground(LOAN_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 1, LOAN_TABLE_COMPONENT_COLOR)
+            .addBackground(LOAN_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, LOAN_TABLE_COMPONENT_COLOR)
             .addRowText(
                 0,
                 [

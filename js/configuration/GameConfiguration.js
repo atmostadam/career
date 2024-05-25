@@ -143,6 +143,31 @@ export const ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 
 export const ASSET_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const ASSET_TABLE_COMPONENT_COLOR = "green";
 
+/** Investment Table Component. */
+export const INVESTMENT_TABLE_COMPONENT_PERCENT_X = 30;
+export const INVESTMENT_TABLE_COMPONENT_PERCENT_Y = 16;
+export const INVESTMENT_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const INVESTMENT_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const INVESTMENT_TABLE_COMPONENT_COLOR = "green";
+
+
+/** Liability Table Component. */
+export const LIABILITY_TABLE_COMPONENT_PERCENT_X = 30;
+export const LIABILITY_TABLE_COMPONENT_PERCENT_Y = 16;
+export const LIABILITY_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const LIABILITY_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const LIABILITY_TABLE_COMPONENT_COLOR = "red";
+
+/** Loan Table Component. */
+export const LOAN_TABLE_COMPONENT_PERCENT_X = 30;
+export const LOAN_TABLE_COMPONENT_PERCENT_Y = 16;
+export const LOAN_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const LOAN_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
+export const LOAN_TABLE_COMPONENT_PERCENT_BORDER = .2;
+export const LOAN_TABLE_COMPONENT_COLOR = "red";
+
 /** Salary Component. */
 export const GAME_SCREEN_SALARY_TITLE_TEXT_PERCENT_X = 3;
 export const GAME_SCREEN_SALARY_TITLE_TEXT_PERCENT_Y = 32;

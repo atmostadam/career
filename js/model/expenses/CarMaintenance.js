@@ -1,10 +1,16 @@
 import { BaseExpense } from "./BaseExpense.js";
 
 export class CarMaintenance extends BaseExpense {
-    constructor(value, yearsOld) {
+    constructor(value, carYearsOld) {
         super("Car Maintenance", value);
-        this._value = this.expenseAtYear(value, yearsOld);
-        this._yearsOld = yearsOld;
+        this.carYearsOld = carYearsOld;
+    }
+
+    nextYear() {
+        return new CarMaintenance(
+            this.getValue(),
+            this.getCarYearsOld() + 1
+        )
     }
 
     expenseAtYear(value, yearsOld) {
@@ -25,15 +31,12 @@ export class CarMaintenance extends BaseExpense {
         return 3000;
     }
 
-    get yearsOld() {
-        return this._yearsOld;
+    getCarYearsOld() {
+        return this.carYearsOld;
     }
 
-    set yearsOld(yearsOld) {
-        this._yearsOld = yearsOld;
-    }
-
-    oneYearOlder() {
-        this._yearsOld++;
+    setCarYearsOld(carYearsOld) {
+        this.carYearsOld = carYearsOld;
+        return this;
     }
 }

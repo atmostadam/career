@@ -1,12 +1,12 @@
 import {
     INVESTMENT_SCREEN
 } from "./../configuration/GameConfiguration.js";
-import { AssetImageComponent } from "./../component/AssetImageComponent.js"
+import { InvestmentTableComponent } from "../component/InvestmentTableComponent.js";
 
 export class InvestmentScreen {
     constructor(context) {
         this.context = context;
-        this.assetImage = new AssetImageComponent(this.context);
+        this.investmentTable = new InvestmentTableComponent(this.context);
     }
 
     update(tick) {
@@ -17,7 +17,7 @@ export class InvestmentScreen {
         if (INVESTMENT_SCREEN != this.context.getScreen()) {
             return;
         }
-        this.assetImage.draw();
+        this.investmentTable.draw();
     }
 
     onMouseOver(x, y) {

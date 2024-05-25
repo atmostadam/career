@@ -39,6 +39,24 @@ export class Expenses {
 
     }
 
+    nextYear() {
+        return new Expenses()
+            .setCarMaintenance(this.getCarMaintenance().nextYear())
+            .setCarTax(this.getCarTax().nextYear())
+            .setCollege(this.getCollege().nextYear())
+            .setCostPerChild(this.getCostPerChild().nextYear())
+            .setEmployerFicaTax(this.getEmployerFicaTax().nextYear())
+            .setFicaTax(this.getFicaTax().nextYear())
+            .setGas(this.getGas().nextYear())
+            .setGroceries(this.getGroceries().nextYear())
+            .setHouseMaintenance(this.getHouseMaintenance().nextYear())
+            .setIncomeTax(this.getIncomeTax().nextYear())
+            .setMortgagePayment(this.getMortgagePayment().nextYear())
+            .setPropertyTax(this.getPropertyTax().nextYear())
+            .setStateIncomeTax(this.getStateIncomeTax().nextYear())
+            .setUtilities(this.getUtilities().nextYear());
+    }
+
     asSortedArray() {
 
     }
@@ -64,55 +82,125 @@ export class Expenses {
         return this.carMaintenance;
     }
 
+    setCarMaintenance(carMaintenance) {
+        this.carMaintenance = carMaintenance;
+        return this;
+    }
+
     getCarTax() {
         return this.carTax;
+    }
+
+    setCarTax(carTax) {
+        this.carTax = carTax;
+        return this;
     }
 
     getCollege() {
         return this.college;
     }
 
+    setCollege(college) {
+        this.college = college;
+        return this;
+    }
+
     getCostPerChild() {
         return this.costPerChild;
+    }
+
+    setCostPerChild(costPerChild) {
+        this.costPerChild = costPerChild;
+        return this;
     }
 
     getEmployerFicaTax() {
         return this.employerFicaTax;
     }
 
+    setEmployerFicaTax(employerFicaTax) {
+        this.employerFicaTax = employerFicaTax;
+        return this;
+    }
+
     getFicaTax() {
         return this.ficaTax;
+    }
+
+    setFicaTax(ficaTax) {
+        this.ficaTax = ficaTax;
+        return this;
     }
 
     getGas() {
         return this.gas;
     }
 
+    setGas(gas) {
+        this.gas = gas;
+        return this;
+    }
+
     getGroceries() {
         return this.groceries;
+    }
+
+    setGroceries(groceries) {
+        this.groceries = groceries;
+        return this;
     }
 
     getHouseMaintenance() {
         return this.houseMaintenance;
     }
 
+    setHouseMaintenance(houseMaintenance) {
+        this.houseMaintenance = houseMaintenance
+        return this;
+    }
+
     getIncomeTax() {
         return this.incomeTax;
+    }
+
+    setIncomeTax(incomeTax) {
+        this.incomeTax = incomeTax;
+        return this;
     }
 
     getMortgagePayment() {
         return this.mortgagePayment;
     }
 
+    setMortgagePayment(mortgagePayment) {
+        this.mortgagePayment = mortgagePayment;
+        return this;
+    }
+
     getPropertyTax() {
         return this.propertyTax;
+    }
+
+    setPropertyTax(propertyTax) {
+        this.propertyTax = propertyTax;
+        return this;
     }
 
     getStateIncomeTax() {
         return this.stateIncomeTax;
     }
 
+    setStateIncomeTax(stateIncomeTax) {
+        this.stateIncomeTax = stateIncomeTax
+        return this;
+    }
+
     getUtilities() {
         return this.utilities;
+    }
+
+    setUtilities(utilities) {
+        this.utilities = utilities;
+        return this;
     }
 }

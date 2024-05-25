@@ -23,6 +23,10 @@ export class DistinguishedSoftwareEngineer {
         this._promotionChance = 1;
     }
 
+    nextYear() {
+
+    }
+
     get title() {
         return this._title;
     }

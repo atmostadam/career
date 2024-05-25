@@ -1,18 +1,21 @@
 import {
-    ASSET_TABLE_COMPONENT_PERCENT_X,
-    ASSET_TABLE_COMPONENT_PERCENT_Y,
-    ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY,
-    ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY,
-    ASSET_TABLE_COMPONENT_PERCENT_BORDER,
-    ASSET_TABLE_COMPONENT_COLOR,
+    INVESTMENT_TABLE_COMPONENT_PERCENT_X,
+    INVESTMENT_TABLE_COMPONENT_PERCENT_Y,
+    INVESTMENT_TABLE_COMPONENT_PERCENT_W_ARRAY,
+    INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY,
+    INVESTMENT_TABLE_COMPONENT_PERCENT_BORDER,
+    INVESTMENT_TABLE_COMPONENT_COLOR,
+    GAME_SCREEN_GRID_TITLE_TYPE,
     GAME_SCREEN_GRID_TITLE_COLOR,
+    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X,
+    GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_Y,
     GAME_SCREEN_GRID_TEXT_TYPE,
     GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X,
     GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y
-} from "./../configuration/GameConfiguration.js";
-import { GridDrawingBuilder } from "./../drawing/GridDrawingBuilder.js";
+} from "../configuration/GameConfiguration.js";
+import { GridDrawingBuilder } from "../drawing/GridDrawingBuilder.js";
 
-export class AssetTableComponent {
+export class InvestmentTableComponent {
     constructor(context) {
         this.context = context;
     }
@@ -34,16 +37,17 @@ export class AssetTableComponent {
     }
 
     draw() {
+        // TODO: Buy & Sell
         new GridDrawingBuilder(
             this.context,
-            ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY,
-            ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY)
-            .addPercentX(ASSET_TABLE_COMPONENT_PERCENT_X)
-            .addPercentY(ASSET_TABLE_COMPONENT_PERCENT_Y)
-            .addBorderForAll(ASSET_TABLE_COMPONENT_PERCENT_BORDER, ASSET_TABLE_COMPONENT_COLOR)
-            .addBackgroundForFirstRow(ASSET_TABLE_COMPONENT_COLOR)
-            .addBackground(ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY.length - 1, 1, ASSET_TABLE_COMPONENT_COLOR)
-            .addBackground(ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, ASSET_TABLE_COMPONENT_COLOR)
+            INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY,
+            INVESTMENT_TABLE_COMPONENT_PERCENT_W_ARRAY)
+            .addPercentX(INVESTMENT_TABLE_COMPONENT_PERCENT_X)
+            .addPercentY(INVESTMENT_TABLE_COMPONENT_PERCENT_Y)
+            .addBorderForAll(INVESTMENT_TABLE_COMPONENT_PERCENT_BORDER, INVESTMENT_TABLE_COMPONENT_COLOR)
+            .addBackgroundForFirstRow(INVESTMENT_TABLE_COMPONENT_COLOR)
+            .addBackground(INVESTMENT_TABLE_COMPONENT_PERCENT_W_ARRAY.length - 1, 1, INVESTMENT_TABLE_COMPONENT_COLOR)
+            .addBackground(INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, INVESTMENT_TABLE_COMPONENT_COLOR)
             .addRowText(
                 0,
                 [

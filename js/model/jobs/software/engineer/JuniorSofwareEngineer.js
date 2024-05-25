@@ -23,6 +23,10 @@ export class JuniorSoftwareEngineer {
         this.promotionChance = 60;
     }
 
+    nextYear() {
+
+    }
+
     getTitle() {
         return this.title;
     }

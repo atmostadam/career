@@ -25,6 +25,22 @@ export class Assets {
         this.treasuryBill = new TreasuryBill(0);
     }
 
+    nextYear() {
+        return new Assets(
+            this.bankAccount.nextYear(),
+            this.car.nextYear(),
+            this.certificateOfDeposit.nextYear(),
+            this.corporateBond.nextYear(),
+            this.house.nextYear(),
+            this.junkBond.nextYear(),
+            this.nasdaqIndex.nextYear(),
+            this.nyseIndex.nextYear(),
+            this.savingsAccount.nextYear(),
+            this.snp500Index.nextYear(),
+            this.treasuryBill.nextYear()
+        );
+    }
+
     getValue() {
         return this.bankAccount.getValue() +
             this.car.getValue() +

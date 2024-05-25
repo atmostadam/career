@@ -23,6 +23,10 @@ export class SoftwareEngineerIII {
         this._promotionChance = 10;
     }
 
+    nextYear() {
+
+    }
+
     get title() {
         return this._title;
     }

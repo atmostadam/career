@@ -19,6 +19,10 @@ export class SeniorFellowSoftwareEngineer {
         this._jobLevel = 11;
     }
 
+    nextYear() {
+
+    }
+
     get title() {
         return this._title;
     }

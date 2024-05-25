@@ -33,6 +33,7 @@ export class BaseAsset {
 
     setValue(value) {
         this.value = value;
+        return this;
     }
 
     getAmount() {
@@ -41,6 +42,7 @@ export class BaseAsset {
 
     setAmount(amount) {
         this.amount = amount;
+        return this;
     }
 
     getPrice() {
@@ -49,14 +51,16 @@ export class BaseAsset {
 
     setPrice(price) {
         this.price = price;
+        return this;
     }
 
     getHistoricRateOfReturn() {
         return this.historicRateOfReturn;
     }
 
-    setHistoricalRateOfReturn(historicalRateOfReturn) {
-        this.historicalRateOfReturn = istoricalRateOfReturn;
+    setHistoricRateOfReturn(historicRateOfReturn) {
+        this.historicRateOfReturn = historicRateOfReturn;
+        return this;
     }
 
     getMinRateOfReturn() {
@@ -65,6 +69,7 @@ export class BaseAsset {
 
     setMinRateOfReturn(minRateOfReturn) {
         this.minRateOfReturn = minRateOfReturn;
+        return this;
     }
 
     getMaxRateOfReturn() {
@@ -73,5 +78,6 @@ export class BaseAsset {
 
     setMaxRateOfReturn(maxRateOfReturn) {
         this.maxRateOfReturn = maxRateOfReturn;
+        return this;
     }
 }

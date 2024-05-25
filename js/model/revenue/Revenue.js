@@ -17,6 +17,13 @@ export class Revenue {
 
     }
 
+    nextYear() {
+        return new Revenue()
+            .setPerformanceBonus(this.getPerformanceBonus().nextYear())
+            .setSalary(this.getSalary().nextYear())
+            .setStockOptions(this.getStockOptions().nextYear());
+    }
+
     asSortedArray() {
 
     }
@@ -30,11 +37,27 @@ export class Revenue {
     getPerformanceBonus() {
         return this.performanceBonus;
     }
+
+    setPerformanceBonus(performanceBonus) {
+        this.performanceBonus = performanceBonus;
+        return this;
+    }
+
     getSalary() {
         return this.salary;
     }
 
+    setSalary(salary) {
+        this.salary = salary;
+        return this;
+    }
+
     getStockOptions() {
         return this.stockOptions;
+    }
+
+    setStockOptions(stockOptions) {
+        this.stockOptions = stockOptions;
+        return this;
     }
 }

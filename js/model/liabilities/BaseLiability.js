@@ -8,11 +8,11 @@ export class BaseLiability {
     }
 
     increase(amount) {
-        this._value += amount;
+        this.value += amount;
     }
 
     decrease(amount) {
-        this._value -= amount;
+        this.value -= amount;
         return this;
     }
 
@@ -26,12 +26,18 @@ export class BaseLiability {
         return this.id;
     }
 
+    setId(id) {
+        this.id = id;
+        return this;
+    }
+
     getValue() {
         return this.value;
     }
 
     setValue(value) {
         this.value = value;
+        return this;
     }
 
     getInterestRate() {
@@ -40,14 +46,16 @@ export class BaseLiability {
 
     setInterestRate(interestRate) {
         this.interestRate = interestRate;
+        return this;
     }
 
     getCurrentYear() {
-        return this._currentYear;
+        return this.currentYear;
     }
 
     setCurrentYear(currentYear) {
         this.currentYear = currentYear;
+        return this;
     }
 
     getTotalYears() {
@@ -56,5 +64,6 @@ export class BaseLiability {
 
     setTotalYears(totalYears) {
         this.totalYears = totalYears;
+        return this;
     }
 }

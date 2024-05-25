@@ -23,6 +23,10 @@ export class SeniorLeadSoftwareEngineer {
         this._promotionChance = 5;
     }
 
+    nextYear() {
+
+    }
+
     get title() {
         return this._title;
     }

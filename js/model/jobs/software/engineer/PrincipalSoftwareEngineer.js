@@ -23,6 +23,10 @@ export class PrincipalSoftwareEngineer {
         this._promotionChance = 5;
     }
 
+    nextYear() {
+
+    }
+
     get title() {
         return this._title;
     }

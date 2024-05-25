@@ -1,3 +1,4 @@
+import { LoanTableComponent } from "../component/LoanTableComponent.js";
 import {
     LOAN_SCREEN
 } from "./../configuration/GameConfiguration.js";
@@ -5,6 +6,7 @@ import {
 export class LoanScreen {
     constructor(context) {
         this.context = context;
+        this.loanTable = new LoanTableComponent(this.context);
     }
 
     update(tick) {
@@ -15,6 +17,7 @@ export class LoanScreen {
         if (LOAN_SCREEN != this.context.getScreen()) {
             return;
         }
+        this.loanTable.draw();
     }
 
     onMouseOver(x, y) {

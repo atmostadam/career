@@ -1,4 +1,4 @@
-export class LastYearNetIncomeComponent {
+export class LastYearNetIncomeTableComponent {
     constructor(context) {
         this.context = context;
     }

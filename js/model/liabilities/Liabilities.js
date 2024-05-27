@@ -5,7 +5,8 @@ import { Mortgage } from "./Mortgage.js";
 import { StudentLoan } from "./StudentLoan.js";
 
 export class Liabilities {
-    constructor() {
+    constructor(context) {
+        this.context = context;
         this.carLoan = new CarLoan(0);
         this.creditCardBalance = new CreditCardBalance(0);
         this.homeEquityLoan = new HomeEquityLoan(0);

@@ -50,9 +50,8 @@ export class GameContext {
         this.clear();
         this.mouseListener = new MouseListener(this);
         let job = new JuniorSoftwareEngineer(this);
-        this.player = new Player(this, job, 22);
+        this.player = new Player(this, job, 22, 22);
         this.player.getLiabilities().getStudentLoan().setValue(100000);
-        this.player.getRevenue().getSalary().setValue(job.getSalary());
         this.player.getExpenses().getMortgagePayment().setValue(500);
         this.screens = new Map();
         this.screens.set(MENU, new Menu(this));
@@ -104,6 +103,7 @@ export class GameContext {
     }
 
     setScreen(screen) {
+        console.log("User Changed Screen [" + screen + "]");
         this.screen = screen;
     }
 

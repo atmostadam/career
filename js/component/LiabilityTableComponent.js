@@ -46,7 +46,6 @@ export class LiabilityTableComponent {
             .addBorderForAll(LIABILITY_TABLE_COMPONENT_PERCENT_BORDER, LIABILITY_TABLE_COMPONENT_COLOR)
             .addBackgroundForFirstRow(LIABILITY_TABLE_COMPONENT_COLOR)
             .addBackground(LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 1, LIABILITY_TABLE_COMPONENT_COLOR)
-            .addBackground(LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, LIABILITY_TABLE_COMPONENT_COLOR)
             .addRowText(
                 0,
                 [
@@ -62,10 +61,7 @@ export class LiabilityTableComponent {
                 1,
                 [
                     this.context.getPlayer().getLiabilities().getCarLoan().getId(),
-                    "$" + this.context.getPlayer().getLiabilities().getCarLoan().getValue(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getLiabilities().getCarLoan().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -76,10 +72,7 @@ export class LiabilityTableComponent {
                 2,
                 [
                     this.context.getPlayer().getLiabilities().getCreditCardBalance().getId(),
-                    "$" + this.context.getPlayer().getLiabilities().getCreditCardBalance().getValue(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getLiabilities().getCreditCardBalance().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -90,10 +83,7 @@ export class LiabilityTableComponent {
                 3,
                 [
                     this.context.getPlayer().getLiabilities().getHomeEquityLoan().getId(),
-                    "$" + this.context.getPlayer().getLiabilities().getHomeEquityLoan().getValue(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getLiabilities().getHomeEquityLoan().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -104,10 +94,7 @@ export class LiabilityTableComponent {
                 4,
                 [
                     this.context.getPlayer().getLiabilities().getMortgage().getId(),
-                    "$" + this.context.getPlayer().getLiabilities().getMortgage().getValue(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getLiabilities().getMortgage().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -118,10 +105,7 @@ export class LiabilityTableComponent {
                 5,
                 [
                     this.context.getPlayer().getLiabilities().getStudentLoan().getId(),
-                    "$" + this.context.getPlayer().getLiabilities().getStudentLoan().getValue(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getLiabilities().getStudentLoan().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

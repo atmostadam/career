@@ -5,29 +5,34 @@ import { Expenses } from "../expenses/Expenses.js";
 import { Year } from "../year/Year.js";
 
 export class Player {
-    constructor(context, job, age) {
+    constructor(context, job, startingAge, age) {
         this.context = context;
         this.job = job;
-        this.startingAge = age;
+        this.startingAge = startingAge;
         this.age = age;
-        this.assets = new Assets();
-        this.liabilites = new Liabilities();
-        this.revenue = new Revenue();
-        this.expenses = new Expenses();
+        this.assets = new Assets(this.context);
+        this.liabilites = new Liabilities(this.context);
+        this.revenue = new Revenue(this.context);
+        this.expenses = new Expenses(this.context);
         this.years = [];
     }
 
     nextYear() {
-        this.age++;
-        let year = new Year(
-            this.job.nextYear(),
-            this.assets.nextYear(),
-            this.liabilites.nextYear(),
-            this.revenue.nextYear(),
-            this.expenses.nextYear()
+        let oldJob = this.job.nextYear();
+        let oldAssets = this.assets.nextYear();
+        let oldLiabilities = this.liabilites.nextYear();
+        let oldRevenue = this.revenue.nextYear()
+        let oldExpenses = this.expenses.nextYear();
+        let oldYear = new Year(
+            this.context,
+            oldJob,
+            oldAssets,
+            oldLiabilities,
+            oldRevenue,
+            oldExpenses
         );
-        this.years.push(year);
-        return year;
+        this.years.push(oldYear);
+        return oldYear;
     }
 
     getAssets() {

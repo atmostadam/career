@@ -57,8 +57,8 @@ export class RevenueTableComponent {
             .addRowText(
                 1,
                 [
-                    this.context.getPlayer().getRevenue().getSalary().getId(),
-                    "$" + this.context.getPlayer().getRevenue().getSalary().getValue()
+                    "Salary",
+                    "$" + this.context.getPlayer().getRevenue().getSalary()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -68,8 +68,8 @@ export class RevenueTableComponent {
             .addRowText(
                 2,
                 [
-                    this.context.getPlayer().getRevenue().getPerformanceBonus().getId(),
-                    "$" + this.context.getPlayer().getRevenue().getPerformanceBonus().getValue()
+                    "Performance Bonus",
+                    "$" + this.context.getPlayer().getRevenue().getPerformanceBonus()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -79,8 +79,8 @@ export class RevenueTableComponent {
             .addRowText(
                 3,
                 [
-                    this.context.getPlayer().getRevenue().getStockOptions().getId(),
-                    "$" + this.context.getPlayer().getRevenue().getStockOptions().getValue()
+                    "Stock Options",
+                    "$" + this.context.getPlayer().getRevenue().getStockOptions()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

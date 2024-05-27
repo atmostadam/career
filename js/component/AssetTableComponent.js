@@ -42,19 +42,12 @@ export class AssetTableComponent {
             .addPercentY(ASSET_TABLE_COMPONENT_PERCENT_Y)
             .addBorderForAll(ASSET_TABLE_COMPONENT_PERCENT_BORDER, ASSET_TABLE_COMPONENT_COLOR)
             .addBackgroundForFirstRow(ASSET_TABLE_COMPONENT_COLOR)
-            .addBackground(ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY.length - 1, 1, ASSET_TABLE_COMPONENT_COLOR)
-            .addBackground(ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 2, ASSET_TABLE_COMPONENT_COLOR)
+            .addBackground(ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY.length - 1, 1, ASSET_TABLE_COMPONENT_COLOR)
             .addRowText(
                 0,
                 [
                     "ASSETS",
-                    "$",
-                    "PPS",
-                    "#",
-                    "BUY",
-                    "",
-                    "",
-                    "SELL"
+                    "$"
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -87,15 +80,7 @@ export class AssetTableComponent {
                 3,
                 [
                     this.context.getPlayer().getAssets().getCertificateOfDeposit().getId(),
-                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getPrice(),
-                    this.context.getPlayer().getAssets().getCertificateOfDeposit().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%",
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getCertificateOfDeposit().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -107,15 +92,7 @@ export class AssetTableComponent {
                 4,
                 [
                     this.context.getPlayer().getAssets().getCorporateBond().getId(),
-                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getPrice(),
-                    this.context.getPlayer().getAssets().getCorporateBond().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%",
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getCorporateBond().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -137,15 +114,7 @@ export class AssetTableComponent {
                 6,
                 [
                     this.context.getPlayer().getAssets().getNasdaqIndex().getId(),
-                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getPrice(),
-                    this.context.getPlayer().getAssets().getNasdaqIndex().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%",
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getNasdaqIndex().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -156,15 +125,7 @@ export class AssetTableComponent {
                 7,
                 [
                     this.context.getPlayer().getAssets().getNyseIndex().getId(),
-                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getPrice(),
-                    this.context.getPlayer().getAssets().getNyseIndex().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%",
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getNyseIndex().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -175,15 +136,7 @@ export class AssetTableComponent {
                 8,
                 [
                     this.context.getPlayer().getAssets().getSavingsAccount().getId(),
-                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getPrice(),
-                    this.context.getPlayer().getAssets().getSavingsAccount().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%",
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getSavingsAccount().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -194,12 +147,7 @@ export class AssetTableComponent {
                 9,
                 [
                     this.context.getPlayer().getAssets().getSnp500Index().getId(),
-                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getPrice(),
-                    this.context.getPlayer().getAssets().getSnp500Index().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getSnp500Index().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,
@@ -210,12 +158,7 @@ export class AssetTableComponent {
                 10,
                 [
                     this.context.getPlayer().getAssets().getTreasuryBill().getId(),
-                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getValue(),
-                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getPrice(),
-                    this.context.getPlayer().getAssets().getTreasuryBill().getAmount(),
-                    "1%",
-                    "10%",
-                    "100%"
+                    "$" + this.context.getPlayer().getAssets().getTreasuryBill().getValue()
                 ],
                 GAME_SCREEN_GRID_TEXT_TYPE,
                 GAME_SCREEN_GRID_TITLE_COLOR,

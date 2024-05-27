@@ -26,6 +26,7 @@ import {
 } from "./../../configuration/GameConfiguration.js";
 import { loadImage } from "./../../context/GameContext.js";
 import { RectangleSolidDrawing } from "./../../drawing/RectangleSolidDrawing.js";
+import { NextYearController } from "../../controller/NextYearController.js";
 
 await loadImage(IMAGE_PLAY_SRC);
 
@@ -34,6 +35,7 @@ export class NextYearButtonComponent {
         this.context = context;
         this.backgroundColor = NEXT_YEAR_BUTTON_DEFAULT_BACKGROUND_COLOR;
         this.pressed = false;
+        this.controller = new NextYearController(this.context);
     }
 
     update(tick) {
@@ -102,6 +104,7 @@ export class NextYearButtonComponent {
             return;
         }
         if (this.pressed == true && pressed == false) {
+            this.controller.nextYear();
             this.context.setScreen(LAST_YEAR_SCREEN);
         }
         this.pressed = pressed;

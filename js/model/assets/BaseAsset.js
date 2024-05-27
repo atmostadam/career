@@ -80,4 +80,31 @@ export class BaseAsset {
         this.maxRateOfReturn = maxRateOfReturn;
         return this;
     }
+
+    getLastYearValue() {
+        return this.lastYearValue;
+    }
+
+    setLastYearValue(lastYearValue) {
+        this.lastYearValue = lastYearValue;
+        return this;
+    }
+
+    getLastYearPrice() {
+        return this.lastYearPrice;
+    }
+
+    setLastYearPrice(lastYearPrice) {
+        this.lastYearPrice = lastYearPrice;
+        return this;
+    }
+
+    getLastYearRateOfReturn() {
+        return this.lastYearRateOfReturn;
+    }
+
+    setLastYearRateOfReturn(lastYearRateOfReturn) {
+        this.lastYearRateOfReturn = lastYearRateOfReturn;
+        return this;
+    }
 }

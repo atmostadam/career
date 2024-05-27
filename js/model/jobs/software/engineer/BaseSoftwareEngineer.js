@@ -1,43 +1,63 @@
 export class BaseSoftwareEngineer {
-    get title() {
-        return this._title;
+    constructor(title, jobLevel, salary, performanceBonus, stockOptions, responsibilities) {
+        this.title = title;
+        this.jobLevel = jobLevel;
+        this.salary = salary;
+        this.performanceBonus = performanceBonus;
+        this.stockOptions = stockOptions;
+        this.responsibilities = responsibilities;
     }
 
-    set title(title) {
-        this._title = title;
+    getTitle() {
+        return this.title;
+    }
+
+    setTitle(title) {
+        this.title = title;
         return this;
     }
 
-    get salary() {
-        return this._salary;
+    getJobLevel() {
+        return this.jobLevel;
     }
 
-    set salary(salary) {
-        this._salary = salary;
+    setJobLevel(jobLevel) {
+        this.jobLevel = jobLevel;
+    }
+
+    getSalary() {
+        return this.salary;
+    }
+
+    setSalary(salary) {
+        this.salary = salary;
         return this;
     }
 
-    get performanceBonus() {
-        return this._performanceBonus;
+    getPerformanceBonus() {
+        return this.performanceBonus;
     }
 
-    set performanceBonus(performanceBonus) {
-        this._performanceBonus = performanceBonus;
+    setPerformanceBonus(performanceBonus) {
+        this.performanceBonus = performanceBonus;
+        return this;
     }
 
-    get stockOptions() {
-        return this._stockOptions;
+    getStockOptions() {
+        return this.stockOptions;
     }
 
-    set stockOptions(stockOptions) {
-        this._stockOptions = stockOptions;
+    setStockOptions(stockOptions) {
+        this.stockOptions = stockOptions;
+        return this;
     }
 
-    get jobLevel() {
-        return this._jobLevel;
+    getResponsibilities() {
+        return this.responsibilities;
     }
 
-    set jobLevel(jobLevel) {
-        this._jobLevel = jobLevel;
+    setResponsibilities(responsibilities) {
+        this.responsibilities = responsibilities;
+        return this;
     }
 }

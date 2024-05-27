@@ -14,7 +14,8 @@ import { StateIncomeTax } from "./StateIncomeTax.js";
 import { Utilities } from "./Utilities.js";
 
 export class Expenses {
-    constructor() {
+    constructor(context) {
+        this.context = context;
         this.carMaintenance = new CarMaintenance(0);
         this.carTax = new CarTax(0);
         this.college = new College(0);

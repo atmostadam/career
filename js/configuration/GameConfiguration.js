@@ -1,5 +1,6 @@
 import { splitToEqualPartsArray } from "./../function/MathFunctions.js";
 
+/** Screens. */
 export const ASSET_SCREEN = "AssetScreen";
 export const EXPENSE_SCREEN = "ExpenseScreen";
 export const FOOTER = "Footer";
@@ -12,6 +13,19 @@ export const MAIN_SCREEN = "MainScreen";
 export const MENU = "Menu";
 export const PROFILE_SCREEN = "ProfileScreen";
 export const REVENUE_SCREEN = "RevenueScreen";
+
+/** Jobs */
+export const JUNIOR_SOFTWARE_ENGINEER = "Junior Software Engineer";
+export const SOFTWARE_ENGINEER_I = "Software Engineer I";
+export const SOFTWARE_ENGINEER_II = "Software Engineer II";
+export const SOFTWARE_ENGINEER_III = "Software Engineer III";
+export const LEAD_SOFTWARE_ENGINEER = "Lead Software Engineer";
+export const SENIOR_LEAD_SOFTWARE_ENGINEER = "Senior Lead Software Engineer";
+export const PRINICPAL_SOFTWARE_ENGINEER = "Principal Software Engineer";
+export const SENIOR_PRINCIPAL_SOFTWARE_ENGINEER = "Senior Principal Software Engineer";
+export const DISTINGUISHED_SOFTWARE_ENGINEER = "Distinguished Software Engineer";
+export const FELLOW_SOFTWARE_ENGINEER = "Fellow Software Engineer";
+export const SENIOR_FELLOW_SOFTWARE_ENGINEER = "Senior Fellow Software Engineer";
 
 /** Default Grid Settings. */
 export const GAME_SCREEN_GRID_TITLE_TYPE = "14pt Helvetica";
@@ -138,7 +152,7 @@ export const EXPENSE_TABLE_COMPONENT_COLOR = "red";
 /** Asset Table Component. */
 export const ASSET_TABLE_COMPONENT_PERCENT_X = 30;
 export const ASSET_TABLE_COMPONENT_PERCENT_Y = 16;
-export const ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const ASSET_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5];
 export const ASSET_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
 export const ASSET_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const ASSET_TABLE_COMPONENT_COLOR = "green";
@@ -155,7 +169,7 @@ export const INVESTMENT_TABLE_COMPONENT_COLOR = "green";
 /** Liability Table Component. */
 export const LIABILITY_TABLE_COMPONENT_PERCENT_X = 30;
 export const LIABILITY_TABLE_COMPONENT_PERCENT_Y = 16;
-export const LIABILITY_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2, 2.5, 1.5, 2.2, 2.5];
+export const LIABILITY_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5];
 export const LIABILITY_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
 export const LIABILITY_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const LIABILITY_TABLE_COMPONENT_COLOR = "red";

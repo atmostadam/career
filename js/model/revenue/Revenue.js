@@ -1,12 +1,6 @@
-import { PerformanceBonus } from "./PerformanceBonus.js";
-import { Salary } from "./Salary.js";
-import { StockOptions } from "./StockOptions.js";
-
 export class Revenue {
-    constructor() {
-        this.performanceBonus = new PerformanceBonus(0);
-        this.salary = new Salary(0);
-        this.stockOptions = new StockOptions(0);
+    constructor(context) {
+        this.context = context;
     }
 
     update() {
@@ -18,46 +12,28 @@ export class Revenue {
     }
 
     nextYear() {
-        return new Revenue()
-            .setPerformanceBonus(this.getPerformanceBonus().nextYear())
-            .setSalary(this.getSalary().nextYear())
-            .setStockOptions(this.getStockOptions().nextYear());
+        return new Revenue(this.context);
     }
 
     asSortedArray() {
 
     }
 
-    getValue() {
-        return this.performanceBonus.getValue() +
-            this.salary.getValue() +
-            this.stockOptions.getValue();
-    }
-
     getPerformanceBonus() {
-        return this.performanceBonus;
-    }
-
-    setPerformanceBonus(performanceBonus) {
-        this.performanceBonus = performanceBonus;
-        return this;
+        return this.context.getPlayer().getJob().getPerformanceBonus();
     }
 
     getSalary() {
-        return this.salary;
-    }
-
-    setSalary(salary) {
-        this.salary = salary;
-        return this;
+        return this.context.getPlayer().getJob().getSalary();
     }
 
     getStockOptions() {
-        return this.stockOptions;
+        return this.context.getPlayer().getJob().getStockOptions();
     }
 
-    setStockOptions(stockOptions) {
-        this.stockOptions = stockOptions;
-        return this;
+    getValue() {
+        return this.getPerformanceBonus() +
+            this.getSalary() +
+            this.getStockOptions();
     }
 }

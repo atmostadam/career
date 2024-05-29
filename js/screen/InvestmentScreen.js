@@ -1,18 +1,12 @@
 import {
-    INVESTMENT_SCREEN,
-    RANGE_SLIDER_X,
-    RANGE_SLIDER_Y,
-    RANGE_SLIDER_W,
-    RANGE_SLIDER_H
+    INVESTMENT_SCREEN
 } from "./../configuration/GameConfiguration.js";
 import { InvestmentTableComponent } from "../component/InvestmentTableComponent.js";
-import { RangeSliderComponent } from "../component/RangeSliderComponent.js";
 
 export class InvestmentScreen {
     constructor(context) {
         this.context = context;
         this.investmentTable = new InvestmentTableComponent(this.context);
-        this.rangeSlider = new RangeSliderComponent(this.context);
         this.trading = true;
     }
 
@@ -25,9 +19,6 @@ export class InvestmentScreen {
             return;
         }
         this.investmentTable.draw();
-        if (this.trading) {
-            this.rangeSlider.draw();
-        }
     }
 
     onMouseOver(x, y) {

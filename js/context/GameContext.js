@@ -25,8 +25,10 @@ import {
     MAIN_SCREEN,
     MENU,
     PROFILE_SCREEN,
-    REVENUE_SCREEN
+    REVENUE_SCREEN,
+    RANGE_SLIDER
 } from "./../configuration/GameConfiguration.js";
+import { RangeSlider } from "../screen/RangeSlider.js";
 
 const images = new Map();
 
@@ -66,6 +68,7 @@ export class GameContext {
         this.screens.set(LIABILITY_SCREEN, new LiabilityScreen(this));
         this.screens.set(LOAN_SCREEN, new LoanScreen(this));
         this.screens.set(LAST_YEAR_SCREEN, new LastYearScreen(this));
+        this.screens.set(RANGE_SLIDER, new RangeSlider(this));
         this.setScreen(PROFILE_SCREEN);
         this.BOTTOM_BROWSER_BUFFER = 100;
     }

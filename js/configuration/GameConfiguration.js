@@ -13,6 +13,7 @@ export const MAIN_SCREEN = "MainScreen";
 export const MENU = "Menu";
 export const PROFILE_SCREEN = "ProfileScreen";
 export const REVENUE_SCREEN = "RevenueScreen";
+export const RANGE_SLIDER = "RangeSlider";
 
 /** Jobs */
 export const JUNIOR_SOFTWARE_ENGINEER = "Junior Software Engineer";
@@ -165,7 +166,6 @@ export const INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray
 export const INVESTMENT_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const INVESTMENT_TABLE_COMPONENT_COLOR = "green";
 
-
 /** Liability Table Component. */
 export const LIABILITY_TABLE_COMPONENT_PERCENT_X = 30;
 export const LIABILITY_TABLE_COMPONENT_PERCENT_Y = 16;
@@ -215,6 +215,26 @@ export const GAME_SCREEN_ASSET_IMAGE_PERCENT_W = 27.5;
 export const GAME_SCREEN_ASSET_IMAGE_PERCENT_H = 36;
 export const GAME_SCREEN_ASSET_IMAGE_PERCENT_BORDER = .2;
 export const GAME_SCREEN_ASSET_IMAGE_COLOR = "white";
+
+/** Range Slider. */
+export const RANGE_SLIDER_PERCENT_X = 70;
+export const RANGE_SLIDER_PERCENT_Y = 49;
+export const RANGE_SLIDER_PERCENT_W = 15;
+export const RANGE_SLIDER_PERCENT_H = 0.5;
+export const RANGE_SLIDER_COLOR = "white";
+export const RANGE_SLIDER_UNITS_PERCENT_X = 70;
+export const RANGE_SLIDER_UNITS_PERCENT_Y = 55;
+export const RANGE_SLIDER_UNITS_COLOR = "white";
+export const RANGE_SLIDER_UNITS_FONT = "16pt Helvetica";
+export const RANGE_SLIDER_DEFAULT_BACKGROUND_COLOR = "orange";
+export const RANGE_SLIDER_ON_CLICK_BACKGROUND_COLOR = "green";
+export const RANGE_SLIDER_ON_MOUSE_OVER_BACKGROUND_COLOR = "cyan";
+export const RANGE_SLIDER_POSITION_PERCENT_Y = 47.75;
+export const RANGE_SLIDER_POSITION_PERCENT_W = 1;
+export const RANGE_SLIDER_POSITION_PERCENT_H = 3;
+
+
+
 
 export const GAME_SCREEN_LIABILITY_PERCENT_X = 63;
 export const GAME_SCREEN_LIABILITY_PERCENT_Y = 60;

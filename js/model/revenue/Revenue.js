@@ -36,4 +36,8 @@ export class Revenue {
             this.getSalary() +
             this.getStockOptions();
     }
+
+    getRevenue(name) {
+        return this.revenueMap.get(name);
+    }
 }

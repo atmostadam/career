@@ -68,9 +68,11 @@ export class GameContext {
         this.screens.set(LIABILITY_SCREEN, new LiabilityScreen(this));
         this.screens.set(LOAN_SCREEN, new LoanScreen(this));
         this.screens.set(LAST_YEAR_SCREEN, new LastYearScreen(this));
-        this.screens.set(RANGE_SLIDER, new RangeSlider(this));
         this.setScreen(PROFILE_SCREEN);
+        this.buttons = new Map();
+        this.grids = new Map();
         this.BOTTOM_BROWSER_BUFFER = 100;
+        
     }
 
     putImage(url, image) {
@@ -83,10 +85,6 @@ export class GameContext {
 
     getMouseListener() {
         return this.mouseListener;
-    }
-
-    setMouseListener(mouseListener) {
-        this.mouseListener = mouseListener;
     }
 
     getPlayer() {

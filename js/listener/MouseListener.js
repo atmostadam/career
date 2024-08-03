@@ -29,7 +29,5 @@ export class MouseListener {
                 context.getScreens().forEach(e => e.onMouseOver(this.mousePositionX, this.mousePositionY));
             }
         });
-
-        context.setMouseListener(this);
     }
 }

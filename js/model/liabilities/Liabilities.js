@@ -87,4 +87,8 @@ export class Liabilities {
         this.studentLoan = studentLoan;
         return this;
     }
+
+    getLiability(name) {
+        return this.liabilityMap.get(name);
+    }
 }

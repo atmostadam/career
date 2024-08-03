@@ -30,6 +30,21 @@ export class Expenses {
         this.propertyTax = new PropertyTax(0);
         this.stateIncomeTax = new StateIncomeTax(0);
         this.utilities = new Utilities(0);
+        this.expenseMap = new Map();
+        this.expenseMap.set(this.carMaintenance.getName(), this.carMaintenance);
+        this.expenseMap.set(this.carTax.getName(), this.carTax);
+        this.expenseMap.set(this.college.getName(), this.college);
+        this.expenseMap.set(this.costPerChild.getName(), this.costPerChild);
+        this.expenseMap.set(this.employerFicaTax.getName(), this.employerFicaTax);
+        this.expenseMap.set(this.ficaTax.getName(), this.ficaTax);
+        this.expenseMap.set(this.gas.getName(), this.gas);
+        this.expenseMap.set(this.groceries.getName(), this.groceries);
+        this.expenseMap.set(this.houseMaintenance.getName(), this.houseMaintenance);
+        this.expenseMap.set(this.incomeTax.getName(), this.incomeTax);
+        this.expenseMap.set(this.mortgagePayment.getName(), this.mortgagePayment);
+        this.expenseMap.set(this.propertyTax.getName(), this.propertyTax);
+        this.expenseMap.set(this.stateIncomeTax.getName(), this.stateIncomeTax);
+        this.expenseMap.set(this.utilities.getName(), this.utilities);
     }
 
     update() {
@@ -203,5 +218,9 @@ export class Expenses {
     setUtilities(utilities) {
         this.utilities = utilities;
         return this;
+    }
+
+    getExpense(name) {
+        return this.expenseMap.get(name);
     }
 }

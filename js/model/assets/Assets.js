@@ -24,6 +24,18 @@ export class Assets {
         this.savingsAccount = new SavingsAccount(0);
         this.snp500Index = new Snp500Index(0);
         this.treasuryBill = new TreasuryBill(0);
+        this.assetMap = new Map();
+        this.assetMap.set(this.bankAccount.getName(), this.bankAccount);
+        this.assetMap.set(this.car.getName(), this.car);
+        this.assetMap.set(this.certificateOfDeposit.getName(), this.certificateOfDeposit);
+        this.assetMap.set(this.corporateBond.getName(), this.corporateBond);
+        this.assetMap.set(this.house.getName(), this.house);
+        this.assetMap.set(this.junkBond.getName(), this.junkBond);
+        this.assetMap.set(this.nasdaqIndex.getName(), this.nasdaqIndex);
+        this.assetMap.set(this.nyseIndex.getName(), this.nyseIndex);
+        this.assetMap.set(this.savingsAccount.getName(), this.savingsAccount);
+        this.assetMap.set(this.snp500Index.getName(), this.snp500Index);
+        this.assetMap.set(this.treasuryBill.getName(), this.treasuryBill);
     }
 
     nextYear() {
@@ -166,5 +178,9 @@ export class Assets {
     setTreasuryBill(treasuryBill) {
         this.treasuryBill = treasuryBill;
         return this;
+    }
+
+    getAsset(name) {
+        return this.assetMap.get(name);
     }
 }

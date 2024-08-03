@@ -28,7 +28,7 @@ export const DISTINGUISHED_SOFTWARE_ENGINEER = "Distinguished Software Engineer"
 export const FELLOW_SOFTWARE_ENGINEER = "Fellow Software Engineer";
 export const SENIOR_FELLOW_SOFTWARE_ENGINEER = "Senior Fellow Software Engineer";
 
-/** Default Grid Settings. */
+/** Deprecated. */
 export const GAME_SCREEN_GRID_TITLE_TYPE = "14pt Helvetica";
 export const GAME_SCREEN_GRID_TITLE_COLOR = "white";
 export const GAME_SCREEN_GRID_TITLE_PERCENT_OFFSET_X = .3;
@@ -37,6 +37,10 @@ export const GAME_SCREEN_GRID_TEXT_TYPE = "12pt Helvetica";
 export const GAME_SCREEN_GRID_TEXT_COLOR = "white";
 export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_X = .3;
 export const GAME_SCREEN_GRID_TEXT_PERCENT_OFFSET_Y = 2.5;
+
+/** Default Grid Settings. */
+export const GRID_TEXT_TYPE_DEFAULT = "14pt Helvetica";
+export const GRID_TEXT_COLOR_DEFAULT = "white";
 
 /** Header. */
 export const HEADER_JOB_TITLE_TEXT_PERCENT_X = 2;
@@ -165,6 +169,8 @@ export const INVESTMENT_TABLE_COMPONENT_PERCENT_W_ARRAY = [9, 5, 3, 3, 1.5, 2.2,
 export const INVESTMENT_TABLE_COMPONENT_PERCENT_H_ARRAY = splitToEqualPartsArray(36, 12);
 export const INVESTMENT_TABLE_COMPONENT_PERCENT_BORDER = .2;
 export const INVESTMENT_TABLE_COMPONENT_COLOR = "green";
+export const INVESTMENT_TABLE_TEXT_PERCENT_OFFSET_X = .3;
+export const INVESTMENT_TABLE_TEXT_PERCENT_OFFSET_Y = 2.5;
 
 /** Liability Table Component. */
 export const LIABILITY_TABLE_COMPONENT_PERCENT_X = 30;

@@ -89,7 +89,6 @@ export class NextYearButtonComponent {
     }
 
     onUnclick(x, y) {
-
         this.setBackgroundColor(false, x, y);
     }
 
